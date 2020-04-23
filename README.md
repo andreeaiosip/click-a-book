@@ -69,7 +69,7 @@ Click on the below links to see the wireframes or you can view them in the  [wir
 
 #### Initial Wireframes
 
-* **[Desktop view]()**
+* **[Desktop view](https://github.com/andreeaiosip/click-a-book/tree/master/documentation/wireframes/desktop)**
 
 
 #### Client stories:
