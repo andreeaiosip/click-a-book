@@ -65,18 +65,11 @@ I have used [Color Wheel - Color Calculator](https://www.sessions.edu/color-calc
 
 The home page will have images with books from different genres, a search bar to find books and review
 
-Click on the below links to see the wireframes or you can view them in the  [wireframes](https://github.com/andreeaiosip/what-a-track/tree/master/wireframes) folder.
+Click on the below links to see the wireframes or you can view them in the  [wireframes]() folder.
 
 #### Initial Wireframes
 
-* **[Mobile view](https://github.com/andreeaiosip/)**
-* **[Desktop view](https://github.com/andreeaiosip)**
-
-#### Final Wireframes
-
-* **[Mobile View](https://github.com/andreeaiosip)**
-
-* **[Desktop View](https://github.com/andreeaiosip/)**
+* **[Desktop view]()**
 
 
 #### Client stories:
