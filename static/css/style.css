@@ -8,7 +8,7 @@ body {
     display: flex;
     flex-direction: column;
     font-size: 1rem;
-    background-color: #DCC48E;
+    background-color: #F6FEDB;
 }
 
 
@@ -28,7 +28,7 @@ body {
  a.navbar-brand {
    color: #F6FEDB;
  }
- 
+
 .navbar-nav .nav-link {
   color: #F6FEDB;
   
@@ -80,7 +80,7 @@ body {
 }
 
 nav {
-  background-color: #6C5A49;
+  background-color: #8c734e;
   -webkit-box-shadow: 1px 6px 6px 0px rgba(50, 50, 50, 0.75);
   -moz-box-shadow:    1px 6px 6px 0px rgba(50, 50, 50, 0.75);
   box-shadow:         1px 6px 6px 0px rgba(50, 50, 50, 0.75);
@@ -98,7 +98,7 @@ nav {
 #footer {
   position: absolute;
   bottom: 0;
-  background-color: #6C5A49;  
+  background-color: #8c734e;  
   line-height: 50px;    
   height: 50px;    
   width: 100%;       
