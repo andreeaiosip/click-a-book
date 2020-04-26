@@ -59,7 +59,7 @@ I have used two fonts, _Open Sans_ for general text displayed on the site. It's 
 I wanted the user to get a sense of calmness and warmth when they open the website. To invite them to think about the feel and look of the books they have read or they will like to read. 
 
 They background, I have started trying different colors for the text.
-I have used [Color Wheel - Color Calculator](https://www.sessions.edu/color-calculator/) to create the color scheme. I have used #a8ccd5 ![#a8ccd5](https://placehold.it/15/a8ccd5/000000?text=+)   , #e1eaec ![#e1eaec](https://placehold.it/15/e1eaec/000000?text=+),  #7ab4c2![#7ab4c2](https://placehold.it/15/7ab4c2b/000000?text=+), #f0e2e0![#f0e2e0](https://placehold.it/15/f0e2e0/000000?text=+) , #efefef![#efefef](https://placehold.it/15/efefef/000000?text=+) as main colors,
+I have used the website [Coolors.co](https://coolors.co/) to create the color scheme. I have used #DCC48E ![#DCC48E](https://placehold.it/15/DCC48E/000000?text=+) , #F6FEDB ![#F6FEDB](https://placehold.it/15/F6FEDB/000000?text=+),  #6C5A49![#6C5A49](https://placehold.it/15/76C5A49/000000?text=+), #F0B67F![#F0B67F](https://placehold.it/15/F0B67F/000000?text=+) , #AF9164![#AF9164](https://placehold.it/15/AF9164/000000?text=+) as main colors,
 
 #### Design wireframes / mock-ups:
 
