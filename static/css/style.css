@@ -81,9 +81,7 @@ nav {
   min-height: 100vh;
 }
 
-#content-wrap {
-  padding-bottom: 2.5rem;    /* Footer height */
-}
+
 
 #footer {
   position: absolute;
@@ -105,4 +103,14 @@ footer > p {
   .navbar-brand {
     display: none;
   }
+}
+
+@media screen and (max-width: 767px) {
+.navbar-nav {
+  display: block;
+  float: none;
+ 
+  text-align: center;
+  margin: 0 auto;
+}
 }
