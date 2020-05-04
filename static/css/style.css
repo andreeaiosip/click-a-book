@@ -1,128 +1,161 @@
-
 @import url('https://fonts.googleapis.com/css?family=Courier+Prime:400,700&display=swap');
-
 body {
-    padding: 0;
-    margin: 0;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    font-size: 1rem;
-    background-color: #f4f4f4;
+	padding: 0;
+	margin: 0;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	font-size: 1rem;
+	background-color: #f4f4f4;
 }
 
-
-
-.row, .container, .container-fluid {
-    margin:0;
-    padding:0;
+.row,
+.container,
+.container-fluid {
+	margin: 0;
+	padding: 0;
 }
 
 .navbar-brand {
-  font-family: 'Courier-Prime', monospace;
-  color: #F6FEDB;
-  margin-left: 20px;
-  
- 
+	font-family: 'Courier-Prime', monospace;
+	color: #F6FEDB;
+	margin-left: 20px;
 }
- a.navbar-brand {
-   color: #F6FEDB;
- }
+
+a.navbar-brand {
+	color: #F6FEDB;
+}
 
 .navbar-nav .nav-link {
-  color: #F6FEDB;
-  
+	color: #F6FEDB;
 }
 
 .fa {
-  margin-right:5px;
+	margin-right: 5px;
 }
+
 
 /* Box Shadow Outset */
+
 .hvr-box-shadow-outset {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-property: box-shadow;
-  transition-property: box-shadow;
+	display: inline-block;
+	vertical-align: middle;
+	-webkit-transform: perspective(1px) translateZ(0);
+	transform: perspective(1px) translateZ(0);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	-webkit-transition-property: box-shadow;
+	transition-property: box-shadow;
 }
-.hvr-box-shadow-outset:hover, .hvr-box-shadow-outset:focus, .hvr-box-shadow-outset:active {
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
+
+.hvr-box-shadow-outset:hover,
+.hvr-box-shadow-outset:focus,
+.hvr-box-shadow-outset:active {
+	box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
 }
-.navbar-nav > li {
-  margin: 0px 25px 0px 25px;
-  font-size: 1.3em;
-  font-family: 'Courier-Prime', monospace;
-  font-weight: 600;
+
+.navbar-nav>li {
+	margin: 0px 25px 0px 25px;
+	font-size: 1.3em;
+	font-family: 'Courier-Prime', monospace;
+	font-weight: 600;
 }
+
 
 /* The code below is a formula to overwrite bootstrap toggler colour taken from GiHub https://github.com/css/csso/issues/377 */
+
 .custom-toggler .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(220, 196, 142)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(220, 196, 142)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
-
-
 
 .custom-toggler.navbar-toggler {
-  outline: none;
+	outline: none;
 }
 
-
-
 .logo-img {
-  height: 35px;
-  margin-left: 15px;
- 
+	height: 35px;
+	margin-left: 15px;
 }
 
 nav {
-  background-color: #8c734e;
-  -webkit-box-shadow: 1px 6px 6px 0px rgba(50, 50, 50, 0.75);
-  -moz-box-shadow:    1px 6px 6px 0px rgba(50, 50, 50, 0.75);
-  box-shadow:         1px 6px 6px 0px rgba(50, 50, 50, 0.75);
+	background-color: #8c734e;
+	-webkit-box-shadow: 1px 6px 6px 0px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow: 1px 6px 6px 0px rgba(50, 50, 50, 0.75);
+	box-shadow: 1px 6px 6px 0px rgba(50, 50, 50, 0.75);
 }
-
-
 
 #page-container {
-  position: relative;
-  min-height: 100vh;
+	position: relative;
+	min-height: 100vh;
 }
 
+.container-form {
+	border: 2px solid #fafafa;
+	text-align: center;
+	height: 400px;
+	width: 400px;
+	margin: auto;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	border-radius: 15px;
+}
 
+.form-body {
+	padding: 70px;
+}
+
+.row-icon {
+	height: 90px;
+	width: 396px;
+	background-color: #dfdddd;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 0px;
+	border-bottom-left-radius: 0px;
+}
+
+.login-header {
+	color: #F6FEDB;
+	font-family: 'Courier-Prime', monospace;
+	padding-top: 15px;
+}
+
+.input-group {
+	padding: 0px 10px 0px 12px;
+}
+
+.custom-btn {
+	background-color: #8c734e;
+	border-color: #F6FEDB;
+}
 
 #footer {
-  position: absolute;
-  bottom: 0;
-  background-color: #8c734e;  
-  line-height: 50px;    
-  height: 50px;    
-  width: 100%;       
+	position: absolute;
+	bottom: 0;
+	background-color: #8c734e;
+	line-height: 50px;
+	height: 50px;
+	width: 100%;
 }
 
-footer > p {
-  text-align: center;
-  margin-bottom: 0;
-  color: #F6FEDB;
+footer>p {
+	text-align: center;
+	margin-bottom: 0;
+	color: #F6FEDB;
 }
 
 @media screen and (max-width: 360px) {
-
-  .navbar-brand {
-    display: none;
-  }
+	.navbar-brand {
+		display: none;
+	}
 }
 
 @media screen and (max-width: 767px) {
-.navbar-nav {
-  display: block;
-  float: none;
- 
-  text-align: center;
-  margin: 0 auto;
-}
+	.navbar-nav {
+		display: block;
+		float: none;
+		text-align: center;
+		margin: 0 auto;
+	}
 }
