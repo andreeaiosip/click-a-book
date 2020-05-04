@@ -2,11 +2,12 @@ env/*
 .vscode/*
 __pycache__/*
 
+Drafts/*
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
-
+cmd.PNG
 # C extensions
 *.so
 
