@@ -18,16 +18,16 @@ body {
 
 .navbar-brand {
 	font-family: 'Courier-Prime', monospace;
-	color: #F6FEDB;
+	color: #f8f8f7;
 	margin-left: 20px;
 }
 
 a.navbar-brand {
-	color: #F6FEDB;
+	color: rgb(248, 248, 247);
 }
 
 .navbar-nav .nav-link {
-	color: #F6FEDB;
+	color: #f8f8f7;
 }
 
 .fa {
@@ -66,7 +66,7 @@ a.navbar-brand {
 /* The code below is a formula to overwrite bootstrap toggler colour taken from GiHub https://github.com/css/csso/issues/377 */
 
 .custom-toggler .navbar-toggler-icon {
-	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(220, 196, 142)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(248, 248, 247)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
 .custom-toggler.navbar-toggler {
@@ -79,7 +79,7 @@ a.navbar-brand {
 }
 
 nav {
-	background-color: #8c734e;
+	background-color: #bc936f;
 	-webkit-box-shadow: 1px 6px 6px 0px rgba(50, 50, 50, 0.75);
 	-moz-box-shadow: 1px 6px 6px 0px rgba(50, 50, 50, 0.75);
 	box-shadow: 1px 6px 6px 0px rgba(50, 50, 50, 0.75);
@@ -91,12 +91,12 @@ nav {
 }
 
 .container-form {
-	border: 2px solid #fafafa;
+	border: 2px solid #cacaca;
 	text-align: center;
-	height: 400px;
-	width: 400px;
+  height: 350px;
+  width: 80%;
 	margin: auto;
-	margin-top: 30px;
+	margin-top: 50px;
 	margin-bottom: 30px;
 	border-radius: 15px;
 }
@@ -106,9 +106,9 @@ nav {
 }
 
 .row-icon {
-	height: 90px;
-	width: 396px;
-	background-color: #dfdddd;
+	height: 60px;;
+	width: auto;
+	background-color: #bc936f;
 	border-top-left-radius: 15px;
 	border-top-right-radius: 15px;
 	border-bottom-right-radius: 0px;
@@ -117,8 +117,10 @@ nav {
 
 .login-header {
 	color: #F6FEDB;
-	font-family: 'Courier-Prime', monospace;
-	padding-top: 15px;
+  font-family: 'Courier-Prime', monospace;
+  font-size: 24px;
+  padding-top: 10px;
+	
 }
 
 .input-group {
@@ -133,7 +135,7 @@ nav {
 #footer {
 	position: absolute;
 	bottom: 0;
-	background-color: #8c734e;
+	background-color: #bc936f;
 	line-height: 50px;
 	height: 50px;
 	width: 100%;
@@ -142,7 +144,7 @@ nav {
 footer>p {
 	text-align: center;
 	margin-bottom: 0;
-	color: #F6FEDB;
+	color: #f8f8f7;
 }
 
 @media screen and (max-width: 360px) {
@@ -157,5 +159,25 @@ footer>p {
 		float: none;
 		text-align: center;
 		margin: 0 auto;
-	}
+  }
+ 
+}
+ @media screen and (min-width: 768px) and (max-width: 782px) {
+ a.navbar-brand {
+    display: none;
+  }
+
+} 
+@media screen and (min-width: 768px){
+
+  .container-form{
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 1024px){
+
+  .container-form{
+    width: 40%;
+  }
 }
