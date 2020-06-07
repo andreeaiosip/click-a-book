@@ -1,44 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <title>Click a Book</title>
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-         <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css" />
-   </head>
-   <body>
-      <div id="page-container">
-         <div id="content-wrap">
-            <nav class="navbar navbar-expand-md">
-               <a href="#"><img class="logo-img img-fluid"  src="../static/img/logo2.png"> </a> 
-               <a class="navbar-brand" href="#">Click a BOOK</a>
-               <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
-               <span class="navbar-toggler-icon"></span>
-               </button>
-               <div class="collapse navbar-collapse" id="navbarToggler">
-                  <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-                     <li class="nav-item active">
-                        <a class="nav-link hvr-box-shadow-outset" href="/" ><i class="fa fa-fw fa-home" aria-hidden="true"></i>HOME <span class="sr-only">(current)</span></a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link hvr-box-shadow-outset" href="/register"><i class="fa fa-user-plus" aria-hidden="true"></i>REGISTER</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link hvr-box-shadow-outset" href="/login"><i class="fa fa-fw fa-sign-in" aria-hidden="true"></i>LOGIN</a>
-                     </li>
-                  </ul>
-               </div>
-            </nav>
-            
-         </div>
-         <div class="hero-image">
-            <div class="hero-text">
-              <h1>Share and discover little gems of literature.</h1>
-            </div>
-          </div>
+
+         
+{% extends 'base.html' %}
+{% block content %}
          <div class="container-form">
             <div class="row-icon">
                <p class="login-header"><i class="fa fa-lock" aria-hidden="true"></i> LOGIN</p>
@@ -61,15 +24,4 @@
             <br />
             <button type="submit" class="btn btn-success custom-btn"><span class="glyphicon glyphicon-off"></span> Login</button>
          </div>
-         <footer id="footer">
-            <p> © 2020 Click a Book - Educational Project</p>
-         </footer>
-      </div>
-      <!-- Footer -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
-      <script src="../static/js/app.js"></script>
-   </body>
-</html>
+             {% endblock %}
