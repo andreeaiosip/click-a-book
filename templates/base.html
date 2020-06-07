@@ -7,8 +7,8 @@
       <title>Click a Book</title>
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-      <link rel="stylesheet" href=".../static/css/style.css">
-   </head>
+      <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css" />
+  </head>
    <body>
   
     
@@ -21,24 +21,27 @@
                </button>
                <div class="collapse navbar-collapse" id="navbarToggler">
                   <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-                     <li class="nav-item active">
-                        <a class="nav-link hvr-box-shadow-outset" href="base.html" ><i class="fa fa-fw fa-home" aria-hidden="true"></i>HOME <span class="sr-only">(current)</span></a>
+                                  <li class="nav-item active">
+                        <a class="nav-link hvr-box-shadow-outset" href="{{ url_for('index') }}" ><i class="fa fa-fw fa-home" aria-hidden="true"></i>HOME <span class="sr-only">(current)</span></a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link hvr-box-shadow-outset" href="base.html"><i class="fa fa-user-plus" aria-hidden="true"></i>REGISTER</a>
+                        <a class="nav-link hvr-box-shadow-outset" href="{{ url_for('register') }}"><i class="fa fa-user-plus" aria-hidden="true"></i>REGISTER</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link hvr-box-shadow-outset" href="login.html"><i class="fa fa-fw fa-sign-in" aria-hidden="true"></i>LOGIN</a>
+                        <a class="nav-link hvr-box-shadow-outset" href="{{ url_for('login') }}"><i class="fa fa-fw fa-sign-in" aria-hidden="true"></i>LOGIN</a>
                      </li>
                   </ul>
                </div>
             </nav>
-            <div class="hero-image">
+
+            {% block content %}
+             {% endblock %}
+            <!-- <div class="hero-image">
                <div class="hero-text">
                  <h1>Share and discover little gems of literature.</h1>
                </div>
              </div>
-      <div>
+      <div> -->
          <!-- <div class="jumbotron jumbotron-fluid">
             <div class="container">
               <h1 class="display-4">Latest review</h1>
@@ -51,18 +54,18 @@
                   publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
             </div>
           </div> -->
-      </div>
+      <!-- </div>
         
       
          <footer id="footer">
             <p> © 2020 Click a Book - Educational Project</p>
-         </footer>
+         </footer> -->
      
       <!-- Footer -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
-      <script src="../static/js/app.js"></script>
+      <script src="../static/js/app.js"></script> -->
    </body>
 </html>
