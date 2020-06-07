@@ -1,8 +1,32 @@
 {% extends 'base.html' %}
 {% block content %}
-            <div class="hero-image">
-               <div class="hero-text">
-                 <h1>Share and discover little gems of literature.</h1>
+              <div class="container-form">
+            <div class="row-icon">
+               <p class="login-header"><i class="fa fa-lock" aria-hidden="true"></i> REGISTER</p>
+            </div>
+            <br /><br />
+            <div class="input-group">
+               <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fa fa-user" aria-hidden="true"></i></span>
                </div>
-             </div>
+               <input type="text" name="" class="form-control" placeholder="Email address"/>
+            </div>
+            <br />
+            <div class="input-group">
+               <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fa fa-key icon" aria-hidden="true"></i></span>
+               </div>
+               <input type="Password" name="" class="form-control" placeholder="Password"/>
+            </div>
+            <br>
+             <div class="input-group">
+               <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fa fa-key icon" aria-hidden="true"></i></span>
+               </div>
+               <input type="Password" name="" class="form-control" placeholder="Confirm password"/>
+            </div>
+            <br />
+            <br />
+            <button type="submit" class="btn btn-success custom-btn"><span class="glyphicon glyphicon-off"></span> Login</button>
+         </div>
 {% endblock %}
