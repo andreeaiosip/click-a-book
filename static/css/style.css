@@ -111,7 +111,7 @@ nav {
   .hero-text>h1 {
 	font-size: 25px;
   }
-
+/* 
 #footer {
 	position: absolute;
 	bottom: 0;
@@ -125,16 +125,16 @@ footer>p {
 	text-align: center;
 	margin-bottom: 0;
 	color: #f8f8f7;
-}
+} */
 
 
 .container-form {
 	border: 2px solid #cacaca;
 	text-align: center;
-  height: 350px;
-  width: 80%;
-  margin-right: auto;
-  margin-left: auto;
+    height: 350px;
+    width: 80%;
+    margin-right: auto;
+     margin-left: auto;
 	margin-top: 50px;
 	margin-bottom: 30px;
 	border-radius: 15px;
