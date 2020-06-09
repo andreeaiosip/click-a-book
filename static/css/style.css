@@ -134,10 +134,14 @@ footer>p {
     height: 350px;
     width: 80%;
     margin-right: auto;
-     margin-left: auto;
+    margin-left: auto;
 	margin-top: 50px;
 	margin-bottom: 30px;
 	border-radius: 15px;
+}
+
+.register-form {
+    height: 430px;
 }
 
 .form-body {
