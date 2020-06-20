@@ -1,24 +1,32 @@
 import os
+from os import path
 from flask import Flask, render_template, redirect, request, url_for, \
     session, flash, Markup
-from flask_pymongo import pymongo, PyMongo
-from os import path
-if path.exists("env.py"):
-    import env
+from flask_pymongo import PyMongo
 
+# MONGO_URI = os.environ.get("MONGO_URI")
+# SECRET_KEY = os.environ.get('SECRET_KEY')
 
+import env
 app = Flask(__name__)
-MONGO_URI = os.environ.get("MONGO_URI")
-# passing Secret key via environment
-SECRET_KEY = os.environ.get("SECRET_KEY")
-
-# creating mongo app
+app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
+print("I'm a db", os.environ.get("MONGO_URI"))
+app.config['SECRET_KEY'] = os.urandom(32)
+# Variables for database
 mongo = PyMongo(app)
+
+
 @app.route('/')
 def index():
     ''' function to display all records on the landing page'''
-    authors = mongo.db.authors.find()
+    authorsDB = list(mongo.db.authors.find())
+    print(authorsDB)
     return render_template(
         'index.html',
-        authors=authors,
+        authorsDB=authorsDB,
         )
+
+if __name__ == '__main__':
+    app.run(host=os.environ.get('IP'),
+            port=int(os.environ.get('PORT')),
+            debug=True)
