@@ -1,7 +1,6 @@
-
-         
 {% extends 'base.html' %}
 {% block content %}
+        <form action="" method="post">
          <div class="container-form">
             <div class="row-icon">
                <p class="login-header"><i class="fa fa-lock" aria-hidden="true"></i> LOGIN</p>
@@ -11,17 +10,25 @@
                <div class="input-group-prepend">
                   <span class="input-group-text"><i class="fa fa-user" aria-hidden="true"></i></span>
                </div>
-               <input type="text" name="" class="form-control" placeholder="username"/>
+               <input type="text" placeholder="Username" class="form-control" name="username" value="{{
+          request.form.username }}">
+             
             </div>
             <br />
             <div class="input-group">
                <div class="input-group-prepend">
                   <span class="input-group-text"><i class="fa fa-key icon" aria-hidden="true"></i></span>
                </div>
-               <input type="Password" name="" class="form-control" placeholder="password"/>
+                <input type="password" placeholder="Password" name="password" class="form-control" value="{{
+          request.form.password }}">
+             
             </div>
             <br />
             <br />
             <button type="submit" class="btn btn-success custom-btn"><span class="glyphicon glyphicon-off"></span> Login</button>
          </div>
+         </form>
+         {% if error %}
+        <p class="error"><strong>Error:</strong> {{ error }}
+      {% endif %}
              {% endblock %}
