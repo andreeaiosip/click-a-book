@@ -1,11 +1,11 @@
+from flask_pymongo import PyMongo
+from flask import Flask, flash, render_template, redirect, request, url_for, \
+    session, flash, Markup
+from forms import RegistrationForm, LoginForm
 import os
 from os import path
 if path.exists("env.py"):
     import env
-from forms import RegistrationForm, LoginForm
-from flask import Flask, flash, render_template, redirect, request, url_for, \
-    session, flash, Markup
-from flask_pymongo import PyMongo
 
 # MONGO_URI = os.environ.get("MONGO_URI")
 # SECRET_KEY = os.environ.get('SECRET_KEY')
@@ -31,7 +31,7 @@ def index():
     return render_template(
         'index.html',
         bookInfoDB=bookInfoDB,
-        )
+    )
 
 
 @app.route("/register", methods=['GET', 'POST'])
@@ -43,14 +43,19 @@ def register():
     return render_template('register.html', title='Register', form=form)
 
 
-@app.route("/login")
+@app.route("/login", methods=['GET', 'POST'])
 def login():
     form = LoginForm()
-    return render_template("/login.html", title="Login", form=form)
+    if form.validate_on_submit():
+        if form.username.data == 'admin' and form.password.data == 'admin':
+            flash('You have been logged in!', 'success')
+            return redirect(url_for('index'))
+        else:
+            flash('Login Unsuccessful. Please check your credentials!', 'danger')
+    return render_template('login.html', title='Login', form=form)
 
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')),
             debug=True)
-
