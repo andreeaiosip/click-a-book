@@ -2,6 +2,7 @@ from flask_pymongo import PyMongo
 from flask import Flask, flash, render_template, redirect, request, url_for, \
     session, flash, Markup
 from forms import RegistrationForm, LoginForm
+from werkzeug.security import generate_password_hash, check_password_hash
 import os
 from os import path
 if path.exists("env.py"):
@@ -46,14 +47,37 @@ def register():
 
 @app.route("/login", methods=['GET', 'POST'])
 def login():
-    form = LoginForm()
-    if form.validate_on_submit():
-        if form.username.data == 'admin' and form.password.data == 'admin':
-            flash('You have been logged in!', 'success')
-            return redirect(url_for('index'))
+
+    if request.method == "POST":
+        username = request.form.get('username')
+        password = request.form.get("password")
+        existing_user = find_user(username)
+        if existing_user and check_password_hash(existing_user["password"], password):
+            # Welcome message
+            flash(Markup(
+                "Nice to see you again "
+                + username.capitalize()
+                ))
+            session["username"] = username
+            return redirect(url_for('index', username=session["username"]))
+
         else:
-            flash('Login Unsuccessful. Please check your credentials!', 'danger')
-    return render_template('login.html', title='Login', form=form)
+
+            flash(Markup(
+                "Credentials not valid. Please try again."))
+        return redirect(url_for('login'))
+
+    return render_template('login.html')
+
+    # Hardcoded login
+    # form = LoginForm()
+    # if form.validate_on_submit():
+    #     if form.username.data == 'admin' and form.password.data == 'admin':
+    #         flash('You have been logged in!', 'success')
+    #         return redirect(url_for('index'))
+    #     else:
+    #         flash('Login Unsuccessful. Please check your credentials!', 'danger')
+    # return render_template('login.html', title='Login', form=form)
 
 
 if __name__ == '__main__':
