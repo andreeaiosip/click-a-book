@@ -7,6 +7,7 @@ from os import path
 if path.exists("env.py"):
     import env
 
+
 # MONGO_URI = os.environ.get("MONGO_URI")
 # SECRET_KEY = os.environ.get('SECRET_KEY')
 
@@ -25,13 +26,11 @@ bookInfoDB = mongo.db.bookInfo
 
 @app.route('/')
 def index():
-    ''' function to display all records on the landing page'''
-    bookInfoDB = list(mongo.db.bookInfo.find())
-    print(bookInfoDB)
-    return render_template(
-        'index.html',
-        bookInfoDB=bookInfoDB,
-    )
+    if "username" in session:
+        return "Nice to see you again " + session["username"]
+
+
+render_template('index.html')
 
 
 @app.route("/register", methods=['GET', 'POST'])
