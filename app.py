@@ -26,11 +26,13 @@ bookInfoDB = mongo.db.bookInfo
 
 @app.route('/')
 def index():
-    if "username" in session:
-        return "Nice to see you again " + session["username"]
-
-
-render_template('index.html')
+    ''' function to display all books on the home page'''
+    bookInfoDB = list(mongo.db.bookInfo.find())
+    print(bookInfoDB)
+    return render_template(
+        'index.html',
+        bookInfoDB=bookInfoDB,
+    )
 
 
 @app.route("/register", methods=['GET', 'POST'])
