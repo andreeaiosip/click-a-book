@@ -8,66 +8,76 @@
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css" />
-  </head>
+   </head>
    <body>
-  
-    
-        
-            <nav class="navbar navbar-expand-md">
-               <a href="#"><img class="logo-img img-fluid"  src="{{ url_for('static', filename='img/logo2.png') }}"> </a> 
-               <a class="navbar-brand" href="#">Click a BOOK</a>
-               <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
-               <span class="navbar-toggler-icon"></span>
-               </button>
-               <div class="collapse navbar-collapse" id="navbarToggler">
-                  <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-                                  <li class="nav-item active">
-                        <a class="nav-link hvr-box-shadow-outset" href="{{ url_for('index') }}" ><i class="fa fa-fw fa-home" aria-hidden="true"></i>HOME <span class="sr-only">(current)</span></a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link hvr-box-shadow-outset" href="{{ url_for('register') }}"><i class="fa fa-user-plus" aria-hidden="true"></i>REGISTER</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link hvr-box-shadow-outset" href="{{ url_for('login') }}"><i class="fa fa-fw fa-sign-in" aria-hidden="true"></i>LOGIN</a>
-                     </li>
-                  </ul>
-               </div>
-            </nav>
-
-            {% block content %}
-             {% endblock %}
-            <!-- <div class="hero-image">
-               <div class="hero-text">
-                 <h1>Share and discover little gems of literature.</h1>
-               </div>
-             </div>
-      <div>  -->
-         <!-- <div class="jumbotron jumbotron-fluid">
-            <div class="container">
-              <h1 class="display-4">Latest review</h1>
-              <p class="lead">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
-                 unknown printer took a galley of type and scrambled it to make a type specimen book. It
-                  has survived not only five centuries, but also the leap into electronic typesetting, 
-                  remaining essentially unchanged. It was popularised in the 1960s with the release of 
-                  Letraset sheets containing Lorem Ipsum passages, and more recently with desktop 
-                  publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-            </div>
-          </div> -->
-      <!-- </div>
-        
+      <nav class="navbar navbar-expand-md">
+         <a href="#"><img class="logo-img img-fluid"  src="{{ url_for('static', filename='img/logo2.png') }}"> </a> 
+         <a class="navbar-brand" href="#">Click a BOOK</a>
+         <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarToggler">
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+               <li class="nav-item active">
+                  <a class="nav-link hvr-box-shadow-outset" href="{{ url_for('index') }}" ><i class="fa fa-fw fa-home" aria-hidden="true"></i>HOME <span class="sr-only">(current)</span></a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link hvr-box-shadow-outset" href="{{ url_for('register') }}"><i class="fa fa-user-plus" aria-hidden="true"></i>REGISTER</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link hvr-box-shadow-outset" href="{{ url_for('login') }}"><i class="fa fa-fw fa-sign-in" aria-hidden="true"></i>LOGIN</a>
+               </li>
+            </ul>
+         </div>
+      </nav>
+      <!-- Flash Messages -->
+<section>
+ 
       
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-dark" role="alert">
+                <p class="flash-message">{{ message }}</p>
+            </div>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+
+           
+       
+   
+<section>
+<!-- End Flash Messages -->
+      {% block content %}
+      {% endblock %}
+      <!-- <div class="hero-image">
+         <div class="hero-text">
+           <h1>Share and discover little gems of literature.</h1>
+         </div>
+         </div>
+         <div>  -->
+      <!-- <div class="jumbotron jumbotron-fluid">
+         <div class="container">
+           <h1 class="display-4">Latest review</h1>
+           <p class="lead">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
+              unknown printer took a galley of type and scrambled it to make a type specimen book. It
+               has survived not only five centuries, but also the leap into electronic typesetting, 
+               remaining essentially unchanged. It was popularised in the 1960s with the release of 
+               Letraset sheets containing Lorem Ipsum passages, and more recently with desktop 
+               publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+         </div>
+         </div> -->
+      <!-- </div>
          <footer id="footer">
             <p> © 2020 Click a Book - Educational Project</p>
          </footer> -->
-     
       <!-- Footer -->
-      
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
-     
-     <script src="{{ url_for('static', filename='js/app.js') }}"></script> 
+      <script src="{{ url_for('static', filename='js/app.js') }}"></script> 
    </body>
 </html>

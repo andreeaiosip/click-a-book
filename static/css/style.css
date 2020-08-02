@@ -112,7 +112,16 @@ nav {
 	font-size: 25px;
   }
 
+.alert>p{
+    text-align: center;
+}
 
+.alert>p{
+    color: #cf551a;
+    font-weight: 600;
+    margin: 0;
+
+}
 .container-form {
 	border: 2px solid #cacaca;
 	text-align: center;
@@ -132,6 +141,7 @@ nav {
 .register-btn {
     margin-top: 20px;
 }
+
 .register-header {
     text-align: center;
 }
