@@ -32,8 +32,7 @@
       </nav>
       <!-- Flash Messages -->
 <section>
- 
-      
+   
 {% with messages = get_flashed_messages() %}
     {% if messages %}
         {% for message in messages %}
@@ -44,36 +43,13 @@
     {% endif %}
 {% endwith %}
 
-           
-       
-   
-<section>
-<!-- End Flash Messages -->
+</section>
+
+
+
       {% block content %}
       {% endblock %}
-      <!-- <div class="hero-image">
-         <div class="hero-text">
-           <h1>Share and discover little gems of literature.</h1>
-         </div>
-         </div>
-         <div>  -->
-      <!-- <div class="jumbotron jumbotron-fluid">
-         <div class="container">
-           <h1 class="display-4">Latest review</h1>
-           <p class="lead">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
-              unknown printer took a galley of type and scrambled it to make a type specimen book. It
-               has survived not only five centuries, but also the leap into electronic typesetting, 
-               remaining essentially unchanged. It was popularised in the 1960s with the release of 
-               Letraset sheets containing Lorem Ipsum passages, and more recently with desktop 
-               publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-         </div>
-         </div> -->
-      <!-- </div>
-         <footer id="footer">
-            <p> © 2020 Click a Book - Educational Project</p>
-         </footer> -->
-      <!-- Footer -->
+
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
