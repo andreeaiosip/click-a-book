@@ -35,7 +35,7 @@ def index():
         bookInfoDB=bookInfoDB,
     )
 
-
+#REGISTER
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -55,42 +55,33 @@ def register():
          #put the user in session cookie
         session["user"] = request.form.get("username").lower()
         flash("Registration sucessful")
-    return render_template("index.html")
+    return render_template("register.html")
+
+# LOGIN-----------------------------------------------------
 
 
 @app.route("/login", methods=['GET', 'POST'])
 def login():
-
     if request.method == "POST":
-        username = request.form.get('username')
-        password = request.form.get("password")
-        existing_user = find_user(username)
-        if existing_user and check_password_hash(existing_user["password"], password):
-            # Welcome message
-            flash(Markup(
-                "Nice to see you again "
-                + username.capitalize()
-                ))
-            session["username"] = username
-            return redirect(url_for('index', username=session["username"]))
+        existing_user = mongo.db.users.find_one(
+            {"username": request.form.get("username").lower()})
+
+        if existing_user:
+            # password match check
+            if check_password_hash(
+                existing_user["password"], request.form.get("password")):
+                    session["user"] = request.form.get("username").lower()
+                    flash("Nice to see you again, {}".format(request.form.get("username")))
+            else:
+                    # invalid password
+                flash("Incorrect credentials.")
+                return redirect(url_for("login"))
 
         else:
-
-            flash(Markup(
-                "Credentials not valid. Please try again."))
-        return redirect(url_for('login'))
-
+                # the username is not registered
+            flash("Incorrect credentials")
+            return redirect(url_for("login"))
     return render_template('login.html')
-
-    # Hardcoded login
-    # form = LoginForm()
-    # if form.validate_on_submit():
-    #     if form.username.data == 'admin' and form.password.data == 'admin':
-    #         flash('You have been logged in!', 'success')
-    #         return redirect(url_for('index'))
-    #     else:
-    #         flash('Login Unsuccessful. Please check your credentials!', 'danger')
-    # return render_template('login.html', title='Login', form=form)
 
 
 if __name__ == '__main__':
