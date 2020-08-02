@@ -25,6 +25,9 @@
                   <a class="nav-link hvr-box-shadow-outset" href="{{ url_for('register') }}"><i class="fa fa-user-plus" aria-hidden="true"></i>REGISTER</a>
                </li>
                <li class="nav-item">
+                  <a class="nav-link hvr-box-shadow-outset" href="{{ url_for('profile', username=session['user']) }}"><i class="fa fa-fw fa-user" aria-hidden="true"></i>MY PROFILE</a>
+               </li>
+               <li class="nav-item">
                   <a class="nav-link hvr-box-shadow-outset" href="{{ url_for('login') }}"><i class="fa fa-fw fa-sign-in" aria-hidden="true"></i>LOGIN</a>
                </li>
             </ul>
