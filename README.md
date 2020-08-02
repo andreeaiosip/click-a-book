@@ -31,7 +31,7 @@ _click a book_ is a books review website where users can share their love for re
 
 ### The need:
 
-Music lovers who want to know the exact lyrics of a song. Could be just as a curiosity and knowledge or even for a karaoke session.
+Book club members can comment and review books on the site.
 
 ### The goals of this website are:
 
