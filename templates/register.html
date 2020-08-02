@@ -1,32 +1,32 @@
 {% extends 'base.html' %}
 {% block content %}
-
- <div class="container-form">
-   <form >
-   <div class="row-icon">
-               <p class="login-header"><i class="fa fa-lock" aria-hidden="true"></i> REGISTER</p>
-            </div>
-            <br /><br />
+<div class="container-form">
+   <form method="POST" action="{{ url_for('register') }}">
+      <div class="row-icon">
+         <p class="login-header"><i class="fa fa-lock" aria-hidden="true"></i> REGISTER</p>
+      </div>
+      <br /><br />
       <div class="card-panel">
+
+      <!-- Username -->
          <div class="row">
             <div class="input-field col s12"> <label for="username">Username</label>
-              <br>
+               <br>
                <input id="username" name="username" type="text" class="form-control validate">
-              
             </div>
          </div>
+          <!-- Password -->
          <div class="row">
             <div class="input-field col s12">
-             <label for="password">Password</label>
+               <label for="password">Password</label>
                <input id="password" name="password" type="password" class=" form-control validate">
-              
             </div>
          </div>
-          <div class="register-btn">
+          <!-- Register button -->
+         <div class="register-btn">
             <button type="submit" class="btn btn-success custom-btn"> SUBMIT</button>
          </div>
       </div>
    </form>
 </div>
-
 {% endblock %}

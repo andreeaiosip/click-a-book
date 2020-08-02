@@ -21,8 +21,8 @@ mongo = PyMongo(app)
 
 # Collections
 
-usersDB = mongo.db.users
-bookInfoDB = mongo.db.bookInfo
+# usersDB = mongo.db.users
+# bookInfoDB = mongo.db.bookInfo
 
 
 @app.route('/')
@@ -36,13 +36,26 @@ def index():
     )
 
 
-@app.route("/register", methods=['GET', 'POST'])
+@app.route("/register", methods=["GET", "POST"])
 def register():
-    form = RegistrationForm()
-    if form.validate_on_submit():
-        flash(f'Account created for {form.username.data}!', 'success')
-        return redirect(url_for('index'))
-    return render_template('register.html', title='Register', form=form)
+    if request.method == "POST":
+        existing_user = mongo.db.users.find_one(
+            {"username": request.form.get("username").lower()})
+
+        if existing_user:
+            flash("Username already taken")
+            return redirect(url_for("register"))
+
+        register = {
+            "username": request.form.get("username").lower(),
+            "password": generate_password_hash(request.form.get("password")) 
+        }
+        mongo.db.users.insert_one(register)
+
+         #put the user in session cookie
+        session["user"] = request.form.get("username").lower()
+        flash("Registration sucessful")
+    return render_template("index.html")
 
 
 @app.route("/login", methods=['GET', 'POST'])
