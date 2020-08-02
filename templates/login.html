@@ -1,48 +1,39 @@
-
 {% extends 'base.html' %}
 {% block content %}
-<form method="POST" action="">
-   {{ form.hidden_tag() }}
-   <div class="container-form">
+<div class="container-form">
+   <form method="POST" action="{{ url_for('login') }}">
       <div class="row-icon">
-         <p class="login-header"><i class="fa fa-lock" aria-hidden="true"></i> LOGIN</p>
+         <p class="login-header"><i class="fa fa-lock" aria-hidden="true"></i> LOG IN</p>
       </div>
       <br /><br />
-      <div class="form-group">
-         {{ form.username.label(class="form-control-label") }}
-         <!-- error trapping for username input-->
-         {% if form.username.errors %}
-         {{ form.username(class="form-control form-control is-invalid") }}
-         <div class="invalid-feedback">
-            {% for error in form.username.errors %}
-            <span>{{ error }}</span>
-            {% endfor %}
-         </div>
-         {% else %}
-         {{ form.username(class="form-control form-control-lg") }}
-         {% endif %}
-      </div>
-      <div class="form-group">
-         {{ form.password.label(class="form-control-label") }}
-         <!--error trapping for password input-->
-         {% if form.password.errors %}
-         {{ form.password(class="form-control form-control is-invalid") }}
-         <div class="invalid-feedback">
-            {% for error in form.password.errors %}
-            <span>{{ error }}</span>
-            {% endfor %}
-         </div>
-         {% else %}
-         {{ form.password(class="form-control form-control-lg") }}
-         {% endif %}
-      </div>
-      <div class="form-group">
-         {{ form.submit(class="btn btn-success custom-btn") }}
-      </div>
-   </div>
-</form>
-{% if error %}
-<p class="error"><strong>Error:</strong> {{ error }}
-   {% endif %}
-   {% endblock %}
+      <div class="card-panel">
 
+      <!-- Username -->
+         <div class="row">
+            <div class="input-field col s12"> <label for="username">Username</label>
+               <br>
+               <input id="username" name="username" type="text" class="form-control validate">
+            </div>
+         </div>
+          <!-- Password -->
+         <div class="row">
+            <div class="input-field col s12">
+               <label for="password">Password</label>
+               <input id="password" name="password" type="password" class=" form-control validate">
+            </div>
+         </div>
+          <!-- Login button -->
+         <div class="register-btn">
+            <button type="submit" class="btn btn-success custom-btn"> SUBMIT</button>
+         </div>
+      </div>
+   </form>
+</div>
+<div class="row">
+    <div class="col s12">
+        <p class="center-align">Not registered yet?
+            <a href="{{ url_for('register') }}" class="light-blue-text text-darken-4">Register here!</a>
+        </p>
+    </div>
+</div>
+{% endblock %}
