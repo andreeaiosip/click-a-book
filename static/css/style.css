@@ -126,7 +126,7 @@ nav {
 .container-form {
 	border: 2px solid #cacaca;
 	text-align: center;
-    height: 350px;
+    height: 400px;
     width: 80%;
     margin-right: auto;
     margin-left: auto;
@@ -177,6 +177,7 @@ nav {
 	background-color: #8c734e;
 	border-color: #F6FEDB;
 }
+
 
 @media screen and (min-width: 768px){
 
