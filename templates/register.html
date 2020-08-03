@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
+
+
 <div class="container-form">
    <form method="POST" action="{{ url_for('register') }}">
       <div class="row-icon">
@@ -12,14 +14,14 @@
          <div class="row">
             <div class="input-field col s12"> <label for="username">Username</label>
                <br>
-               <input id="username" name="username" type="text" pattern="[a-z]{4,10}" class="form-control validate" required>
+               <input id="username" name="username" type="text" pattern="[a-zd.]{6,15}" class="form-control validate" required>
             </div>
          </div>
           <!-- Password -->
          <div class="row">
             <div class="input-field col s12">
                <label for="password">Password</label>
-               <input id="password" name="password" type="password" pattern=".{6,}" class=" form-control validate" required>
+               <input id="password" name="password" type="password" pattern="^\S+{6,32}" class=" form-control validate" required>
             </div>
          </div>
           <!-- Register button -->
@@ -35,5 +37,11 @@
         </p>
     </div>
 </div>
+</div>
+<div class="mx-auto">
+<p>The username must be only lowercase letters and numbers; at least 6 characters.
+<br>
+The password must contain at least 6  characters.
+</p>
 </div>
 {% endblock %}
