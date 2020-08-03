@@ -72,7 +72,7 @@ def login():
             if check_password_hash(
                 existing_user["password"], request.form.get("password")):
                     session["user"] = request.form.get("username").lower()
-                    flash("Nice to see you again, {}".format(
+                    flash("Nice to see you again, {}!".format(
                         request.form.get("username")))
                     return redirect(url_for(
                         "profile", username=session["user"]))
@@ -96,6 +96,13 @@ def profile(username):
        {"username": session["user"]})["username"]
     return render_template("profile.html", username=username)
 
+
+@app.route("/logout")
+def logout():
+# remove user from current session cookie
+    flash("You have been logged out. See you soon!")
+    session.pop("user")
+    return redirect(url_for("login"))
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
