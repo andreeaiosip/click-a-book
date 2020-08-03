@@ -185,20 +185,27 @@ nav {
   }
 }
 
-@media screen and (min-width: 1024px){
+@media (max-width: 990px){
+
+  .navbar-nav {
+    text-align: center;
+  }
+}
+
+@media (min-width: 1024px){
 
   .container-form{
     width: 40%;
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media (min-width: 1200px) {
 	a.navbar-brand {
 		display: block;
 	}
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
 	.navbar-nav {
 		display: block;
 		float: none;
