@@ -75,7 +75,7 @@ def login():
                     flash("Nice to see you again, {}!".format(
                         request.form.get("username")))
                     return redirect(url_for(
-                        "profile", username=session["user"]))
+                        "index", username=session["user"]))
             else:
                     # invalid password
                 flash("Incorrect credentials.")
