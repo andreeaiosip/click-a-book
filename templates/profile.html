@@ -1,13 +1,21 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="container-form">
+<!-- <div class="container-form">
    <div>
    
       <div class="card-panel">
 
-     <h3> {{ username }}'s Profile</h3>
+     
       </div>
    </div>
-  </div> 
+  </div>  -->
+  <div class="card card-profile border-secondary mb-3 mx-auto" style="max-width: 20rem;  margin-top: 50px;">
+ 
+  <div class="card-body text-secondary">
+    <h5 class="card-title">{{ username }}'s Profile</h5>
+    <p class="card-text">You don't want to have a profile on our website anymore? No worries, you can delete your profile by clicking the button below.</p>
+  </div>
+  <div class="card-footer bg-transparent border-secondary mx-auto"><button type="button" class="btn btn-danger">Delete Profile</button></div>
+</div>
 
 {% endblock %}
