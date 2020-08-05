@@ -7,18 +7,20 @@
         <h1>What do you want to read this month?</h1>
     </div>
 </div>
-
-<div>
 {% for book in books %}
+<div>
+<ul class="list-group list-group-flush">
+  <li class="list-group-item">
+    <span>Title:</span> {{ book.title }} <br>
+    <span>Author:</span> {{ book.author_fname }}{{ book.author_sname }}<br>
+    <span>Genre:</span> {{ book.genre }}<br>
+    <span>Published:</span> {{ book.year }}<br>
+    <span>Synopsis:</span> {{ book.synopsis }}
+  </li>
+</ul>
 
-    {{ book.title}} <br>
-    {{ book.author_fname}}
-    {{ book.author_sname}}<br>
-    {{ book.genre}}<br>
-    {{ book.year}}<br>
-    {{ book.synopsis}}<br>
 
-{% endfor %}
+{% endfor %} 
 </div>  
 
 {% endblock %}
