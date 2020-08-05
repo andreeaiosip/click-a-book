@@ -7,6 +7,19 @@
         <h1>What do you want to read this month?</h1>
     </div>
 </div>
-                
+
+<div>
+{% for book in books %}
+
+    {{ book.title}} <br>
+    {{ book.author_fname}}
+    {{ book.author_sname}}<br>
+    {{ book.genre}}<br>
+    {{ book.year}}<br>
+    {{ book.synopsis}}<br>
+
+{% endfor %}
+</div>  
+
 {% endblock %}
                

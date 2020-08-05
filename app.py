@@ -22,18 +22,14 @@ mongo = PyMongo(app)
 # Collections
 
 # usersDB = mongo.db.users
-# bookInfoDB = mongo.db.bookInfo
+# books = mongo.db.bookInfo
 
 
 @app.route('/')
 def index():
     ''' function to display all books on the home page'''
-    bookInfoDB = list(mongo.db.bookInfo.find())
-    print(bookInfoDB)
-    return render_template(
-        'index.html',
-        bookInfoDB=bookInfoDB,
-    )
+    books = list(mongo.db.bookInfo.find())
+    return render_template('index.html', books=books)
 
 # REGISTER
 @app.route("/register", methods=["GET", "POST"])
