@@ -1,5 +1,17 @@
 {% extends 'base.html' %}
 {% block content %}
+
+<div class="hero-image">
+    <div class="hero-text"> 
+    
+    {% if session.user %}
+        <h1>VOTE your book choice for next month's bookclub!</h1>
+   {% else %}
+     <h1>Log in to VOTE your book choice for next month's bookclub!</h1>
+       {% endif %}
+    </div>
+</div>
+<div>
 <div class="container-form">
    <form method="POST" action="{{ url_for('login') }}">
       <div class="row-icon">
@@ -25,7 +37,7 @@
          </div>
           <!-- Login button -->
          <div class="register-btn">
-            <button type="submit" class="btn btn-success custom-btn"> SUBMIT</button>
+            <button type="submit"  class="btn btn-success custom-btn"> SUBMIT</button>
          </div>
       </div>
    </form>
@@ -35,5 +47,7 @@
             <a href="{{ url_for('register') }}" class="light-blue-text text-darken-4">Join here!</a>
         </p>
     </div>
-</div></div>
+</div>
+</div>
+</div>
 {% endblock %}
