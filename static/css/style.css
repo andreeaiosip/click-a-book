@@ -128,7 +128,7 @@ nav {
 
 .container-books {
     border-bottom: 2px solid #8c734e;
-    background-color: #e3d8c3;
+    /* background-color: #e3d8c3; */
     border-radius: 7px;
     padding: 20px;
 }
