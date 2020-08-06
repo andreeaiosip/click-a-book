@@ -1,23 +1,20 @@
+
+
 {% extends 'base.html' %}
 {% block content %}
- <div class="hero-image">
-    <div class="hero-text"> 
-
-        <h1>{{ username }}'s profile</h1>
-
-    </div>
+<div class="hero-image">
+   <div class="hero-text">
+      <h1>{{ username }}'s profile</h1>
+   </div>
 </div>
-  <div class="card card-profile border-secondary mb-3 mx-auto" style="max-width: 80vw;  margin-top: 50px;">
- 
-  <div>
-    <h5 >Your username is: {{ username }}</h5>
-   
-    <p class="card-text">
-    
-    <hr>
-    You don't want to have a profile on our website anymore? No worries, you can delete your profile by clicking the button below.</p>
-  </div>
-  <div class="card-footer bg-transparent border-secondary mx-auto"><button type="button" class="btn btn-danger">Delete Profile</button></div>
+<div class="card card-profile border-secondary mb-3 mx-auto">
+   <div>
+      <h5 >Your username is: {{ username }}</h5>
+      <p class="card-text">
+      <hr>
+      You don't want to have a profile on our website anymore? No worries, you can delete your profile by clicking the button below.</p>
+   </div>
+   <div class="card-footer bg-transparent border-secondary mx-auto"><button type="button" class="btn btn-danger">Delete Profile</button></div>
 </div>
-
 {% endblock %}
+
