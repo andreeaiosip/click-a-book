@@ -4,15 +4,13 @@
 
  <div class="hero-image">
     <div class="hero-text">
-        <h1>What do you want to read this month?
-        <br>
-        <br>
+        <h1>
           Log in to VOTE your book choice for next month's bookclub!</h1>
     </div>
 </div>
 {% for book in books %}
 <div class="container container-books mx-auto"> 
-    
+
             <p><span class="book-details">Title:</span>  {{ book.title }} </p>
             <p><span class="book-details">Author:</span>  {{ book.author_fname }}{{ book.author_sname }}</p> 
             <p><span class="book-details">Genre:</span>  {{ book.genre }}</p> 
