@@ -85,7 +85,7 @@ a.navbar-brand {
 }
 
 nav {
-	background-color: #d2b296;;
+	background-color: #d2b296;
 	-webkit-box-shadow: 1px 6px 6px 0px rgba(50, 50, 50, 0.75);
 	-moz-box-shadow: 1px 6px 6px 0px rgba(50, 50, 50, 0.75);
 	box-shadow: 1px 6px 6px 0px rgba(50, 50, 50, 0.75);
@@ -167,15 +167,15 @@ font-weight: 700;
 .row-icon {
 	height: 60px;;
 	width: auto;
-	background-color: #bc936f;
+	background-color: #d2b296;
 	border-top-left-radius: 15px;
 	border-top-right-radius: 15px;
 	border-bottom-right-radius: 0px;
 	border-bottom-left-radius: 0px;
-}
+} 
 
 .login-header {
-	color: #F6FEDB;
+  color: #F6FEDB;
   font-family: 'Courier-Prime', monospace;
   font-size: 24px;
   padding-top: 10px;
