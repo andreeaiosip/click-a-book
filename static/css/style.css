@@ -115,15 +115,15 @@ nav {
 	font-size: 25px;
   }
 
-.alert>p{
-    text-align: center;
+.alert{
+    margin-bottom: 0px;
 }
 
 .alert>p{
-    color: #cf551a;
+    color: #cf551a; 
+    text-align: center;
     font-weight: 600;
     margin: 0;
-
 }
 
 .container-books {
