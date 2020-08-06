@@ -85,7 +85,7 @@ a.navbar-brand {
 }
 
 nav {
-	background-color: #bc936f;
+	background-color: #d2b296;;
 	-webkit-box-shadow: 1px 6px 6px 0px rgba(50, 50, 50, 0.75);
 	-moz-box-shadow: 1px 6px 6px 0px rgba(50, 50, 50, 0.75);
 	box-shadow: 1px 6px 6px 0px rgba(50, 50, 50, 0.75);
@@ -123,6 +123,19 @@ nav {
     margin: 0;
 
 }
+
+.container-books {
+    border-bottom: 2px solid #8c734e;
+    background-color: #e3d8c3;
+    border-radius: 7px;
+    padding: 20px;
+}
+
+
+.book-details {
+font-weight: 700;
+}
+
 .container-form {
 	border: 2px solid #cacaca;
 	text-align: center;
