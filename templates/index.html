@@ -3,9 +3,13 @@
 {% block content %}
 
  <div class="hero-image">
-    <div class="hero-text">
-        <h1>
-          Log in to VOTE your book choice for next month's bookclub!</h1>
+    <div class="hero-text"> 
+    
+    {% if session.user %}
+        <h1>VOTE your book choice for next month's bookclub!</h1>
+   {% else %}
+     <h1>Log in to VOTE your book choice for next month's bookclub!</h1>
+       {% endif %}
     </div>
 </div>
 {% for book in books %}
