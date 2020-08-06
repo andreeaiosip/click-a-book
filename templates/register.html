@@ -1,7 +1,17 @@
 {% extends 'base.html' %}
 {% block content %}
+<div class="hero-image">
+    <div class="hero-text"> 
+    
+    {% if session.user %}
+        <h1>VOTE your book choice for next month's bookclub!</h1>
+   {% else %}
+     <h1>Log in to VOTE your book choice for next month's bookclub!</h1>
+       {% endif %}
+    </div>
+</div>
 
-
+<div>
 <div class="container-form">
    <form method="POST" action="{{ url_for('register') }}">
       <div class="row-icon">
@@ -38,10 +48,11 @@
     </div>
 </div>
 </div>
-<div class="mx-auto">
-<p>The username must be only lowercase letters and numbers; at least 6 characters.
+<div class="footer-registration">
+<p >The username must be only lowercase letters and numbers; at least 6 characters.
 <br>
 The password must contain at least 6  characters.
 </p>
+</div>
 </div>
 {% endblock %}
