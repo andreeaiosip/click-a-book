@@ -6,9 +6,9 @@
     <div class="hero-text"> 
     
     {% if session.user %}
-        <h1>VOTE your book choice for next month's bookclub!</h1>
+        <h1>Pick your book choice for next month's bookclub!</h1>
    {% else %}
-     <h1>Log in to VOTE your book choice for next month's bookclub!</h1>
+     <h1>Log in to pick your book choice for next month's bookclub!</h1>
        {% endif %}
     </div>
 </div>
@@ -20,8 +20,9 @@
             <p><span class="book-details">Genre:</span>  {{ book.genre }}</p> 
             <p><span class="book-details">Published:</span>  {{ book.year }}</p>
             <p><span class="book-details">Synopsis:</span> {{ book.synopsis }}</p> 
-
-<a class="btn btn-primary" href="{{ url_for('add_comment') }}" role="button">Add comment</a>
+ {% if session.user %}
+<a class="custom-btn btn" href="{{ url_for('add_comment') }}" role="button">Add comment</a>
+ {% endif %}
   </div> 
 <hr>
 {% endfor %} 

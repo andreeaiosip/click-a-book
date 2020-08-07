@@ -116,9 +116,20 @@ def logout():
 #     return redirect(url_for("/index"))
 
 
-@app.route("/add_comment")
+@app.route("/add_comment", methods=["GET", "POST"])
 def add_comment():
-    return render_template("add_comment.html")
+    if request.method == "POST":
+        new_comment = {
+            "comment": request.form.get("comment"),
+            "username": session["user"]
+        }
+
+        mongo.db.comments.comment.insert_one(new_comment)
+        flash("Comment added")
+        return redirect(url_for("index"))
+
+    comment = mongo.db.comments.find().sort("comments", 1)
+    return render_template("add_comment.html", comment=comment)
 
 
 if __name__ == '__main__':
