@@ -4,10 +4,11 @@
 
   <!-- COMMENT AREA --------------------------->
 <div class="container comment-container mx-auto">
- <form method="POST" action="">
+ <form method="POST" action="{{ url_for('add_comment') }}">
   <div class="form-group">
-    <label for="inputComment">Comment</label>
-    <textarea class="form-control" id="inputComment" rows="3"></textarea>
+    <label for="comment">Why would you pick this book?</label>
+    <textarea class="form-control" id="comment" name="comment" 
+    minlength="5" maxlength="300" rows="3" required></textarea>
   </div>
 </form> 
 <a class="custom-btn btn" href="#" role="button">Add comment</a>
