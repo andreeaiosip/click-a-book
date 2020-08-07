@@ -121,14 +121,14 @@ def add_comment():
     if request.method == "POST":
         new_comment = {
             "comment": request.form.get("comment"),
-            "username": session["user"]
+            "username": session["username"]
         }
 
-        mongo.db.comments.comment.insert_one(new_comment)
+        mongo.db.books.comments.comment.insert_one(new_comment)
         flash("Comment added")
         return redirect(url_for("index"))
 
-    comment = mongo.db.comments.find().sort("comments", 1)
+    comment = mongo.db.books.comments.comment.find().sort("comment", 1)
     return render_template("add_comment.html", comment=comment)
 
 
