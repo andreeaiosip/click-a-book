@@ -67,10 +67,10 @@ def login():
             # password match check
             if check_password_hash(
                 existing_user["password"], request.form.get("password")):
-                    session["user"] = request.form.get("username").lower()
-                    flash("Nice to see you again, {}!".format(
+                session["user"] = request.form.get("username").lower()
+                flash("Nice to see you again, {}!".format(
                         request.form.get("username")))
-                    return redirect(url_for(
+                return redirect(url_for(
                         "index", username=session["user"]))
             else:
                     # invalid password
@@ -92,7 +92,7 @@ def profile(username):
        {"username": session["user"]})["username"]
 
     if session["user"]:
-         return render_template("profile.html", username=username)
+        return render_template("profile.html", username=username)
 
     return redirect(url_for("profile"))
 
@@ -109,16 +109,16 @@ def logout():
 
 # DELETE PROFILE ------------------------------
 
-@app.route("/delete_profile/<user_id>")
-def delete_profile(user_id):
-    mongo.db.users.remove({"_id": ObjectId(user_id)})
-    flash("Your profile has been deleted.")
-    return redirect(url_for("/index"))
+# @app.route("/delete_profile/<user_id>")
+# def delete_profile(user_id):
+#     mongo.db.users.remove({"_id": ObjectId(user_id)})
+#     flash("Your profile has been deleted.")
+#     return redirect(url_for("/index"))
 
 
 @app.route("/add_comment")
 def add_comment():
-    return render_template("add_comment")
+    return render_template("add_comment.html")
 
 
 if __name__ == '__main__':
