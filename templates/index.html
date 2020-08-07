@@ -20,11 +20,19 @@
             <p><span class="book-details">Genre:</span>  {{ book.genre }}</p> 
             <p><span class="book-details">Published:</span>  {{ book.year }}</p>
             <p><span class="book-details">Synopsis:</span> {{ book.synopsis }}</p> 
- {% if session.user %}
-<a class="custom-btn btn" href="{{ url_for('add_comment') }}" role="button">Add comment</a>
- {% endif %}
-  </div> 
+
+
+{% if session.user %}
+            <a class="custom-btn btn" href="{{ url_for('add_comment') }}" role="button">Add comment</a>
 <hr>
+    <div>
+        <p><span class="book-details">Posted by:</span>  {{ book.username }}</p>
+        <p><italic>Comment:</italic> {{ book.comment }}</p>
+    </div>  {% endif %}
+</div>
+
+<hr>
+
 {% endfor %} 
 
 
