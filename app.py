@@ -31,7 +31,7 @@ def index():
     books = list(mongo.db.bookInfo.find())
     return render_template('index.html', books=books)
 
-# REGISTER
+# REGISTER------------------------------------
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -84,7 +84,7 @@ def login():
     return render_template('login.html')
 
 
-# USER'S PROFILE
+# USER'S PROFILE -----------------------
 @app.route("/profile/<username>", methods=['GET', 'POST'])
 def profile(username):
     # get the session username from db
@@ -97,7 +97,7 @@ def profile(username):
     return redirect(url_for("profile"))
 
 
-# LOGOUT
+# LOGOUT -----------------------------------
 
 @app.route("/logout")
 def logout():
@@ -105,6 +105,20 @@ def logout():
     flash("You have been logged out. See you soon!")
     session.pop("user")
     return redirect(url_for("login"))
+
+
+# DELETE PROFILE ------------------------------
+
+@app.route("/delete_profile/<user_id>")
+def delete_profile(user_id):
+    mongo.db.users.remove({"_id": ObjectId(user_id)})
+    flash("Your profile has been deleted.")
+    return redirect(url_for("/index"))
+
+
+@app.route("/add_comment")
+def add_comment():
+    return render_template("add_comment")
 
 
 if __name__ == '__main__':

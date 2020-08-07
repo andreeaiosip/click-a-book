@@ -20,7 +20,12 @@
             <p><span class="book-details">Genre:</span>  {{ book.genre }}</p> 
             <p><span class="book-details">Published:</span>  {{ book.year }}</p>
             <p><span class="book-details">Synopsis:</span> {{ book.synopsis }}</p> 
-</div>  
+
+<a class="btn btn-primary" href="{{ url_for('add_comment') }}" role="button">Add comment</a>
+  
+
+
+</div> 
 <hr>
 {% endfor %} 
 
