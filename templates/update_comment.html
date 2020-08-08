@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<!-- COMMENT AREA --------------------------->
+<div class="container comment-container mx-auto">
+	<form method="POST" action="{{ url_for('update_comment', comment_id=comment._id) }}">
+		<div class="form-group">
+			<label for="book">Update your comment</label>
+			<textarea class="form-control" id="comment" name="comment" minlength="5" maxlength="300" rows="3" required></textarea>
+		</div>
+        <button type="submit" class="custom-btn btn">Update Comment</button>
+    </form>
+</div>
+{% endblock %}

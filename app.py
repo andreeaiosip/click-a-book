@@ -155,8 +155,8 @@ def edit_comment(comment_id):
         })
         flash("Comment updated")
         return redirect(url_for("index"))
-    #comments = mongo.db.comments.find_one({"_id": ObjectId(comment_id)})
-    #return render_template("update_comment.html", comments=comments)
+    comments = mongo.db.comments.find_one({"_id": ObjectId(comment_id)})
+    return render_template("update_comment.html", comments=comments)
 
 
 if __name__ == '__main__':
