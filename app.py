@@ -104,7 +104,7 @@ def profile(username):
 @app.route("/logout")
 def logout():
     # remove user from current session cookie
-
+    
     flash("You have been logged out. See you soon!")
     session.pop("user")
     return redirect(url_for("login"))
@@ -148,14 +148,16 @@ def delete_comment(comment_id):
 
 # UPDATE COMMENT -------------------------
 @app.route("/update_comment/<comment_id>", methods=["GET", "POST"])
-def edit_comment(comment_id):
+def update_comment(comment_id):
+    comments = mongo.db.comments.find_one({"_id": ObjectId(comment_id)})
     if request.method == "POST":
         mongo.db.comments.update({'_id': ObjectId(comment_id)}, {
-            "comment": request.form.get("comment")
+            "title": comments["title"],
+            "comment": request.form.get("comment"),
+            "username": session["user"]
         })
         flash("Comment updated")
         return redirect(url_for("index"))
-    comments = mongo.db.comments.find_one({"_id": ObjectId(comment_id)})
     return render_template("update_comment.html", comments=comments)
 
 
