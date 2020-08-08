@@ -23,12 +23,13 @@
 
 
 {% if session.user %}
-            <a class="custom-btn btn" href="{{ url_for('add_comment') }}" role="button">Add comment</a>
-<hr>
+    <a class="custom-btn btn" type="submit"  href="{{ url_for('add_comment', book_id=book._id) }}" role="button">Add comment</a>
+    <hr>
     <div>
-        <p><span class="book-details">Posted by:</span>  {{ book.username }}</p>
-        <p><italic>Comment:</italic> {{ book.comment }}</p>
-    </div>  {% endif %}
+        <p><span class="book-details">Posted by:</span>  comments.username </p>
+        <p><italic>Comment:</italic>  comments.comment </p>
+    </div>  
+{% endif %}
 </div>
 
 <hr>
