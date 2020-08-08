@@ -103,7 +103,8 @@ def profile(username):
 
 @app.route("/logout")
 def logout():
-# remove user from current session cookie
+    # remove user from current session cookie
+
     flash("You have been logged out. See you soon!")
     session.pop("user")
     return redirect(url_for("login"))
@@ -139,13 +140,23 @@ def add_comment(book_id):
 # DELETE COMMENT -----------------
 @app.route("/delete_comment/<comment_id>", methods=["GET", "POST"])
 def delete_comment(comment_id):
-    comments = mongo.db.comments.find_one({"_id": ObjectId(comment_id)})
-    if request.method == "POST":
-        comments.remove({'_id': ObjectId(comment_id)})
+    mongo.db.comments.remove({"_id": ObjectId(comment_id)})
+    flash("Comment deleted")
+    return redirect(url_for("index"))
+    # return render_template("delete_comment.html", comments=comments)
 
-        flash("Comment deleted")
+
+# UPDATE COMMENT -------------------------
+@app.route("/update_comment/<comment_id>", methods=["GET", "POST"])
+def edit_comment(comment_id):
+    if request.method == "POST":
+        mongo.db.comments.update({'_id': ObjectId(comment_id)}, {
+            "comment": request.form.get("comment")
+        })
+        flash("Comment updated")
         return redirect(url_for("index"))
-    return render_template("delete_comment.html", comments=comments)
+    #comments = mongo.db.comments.find_one({"_id": ObjectId(comment_id)})
+    #return render_template("update_comment.html", comments=comments)
 
 
 if __name__ == '__main__':
