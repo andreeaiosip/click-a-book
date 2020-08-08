@@ -30,7 +30,8 @@ mongo = PyMongo(app)
 def index():
     ''' function to display all books on the home page'''
     books = list(mongo.db.bookInfo.find())
-    return render_template('index.html', books=books)
+    comments = list(mongo.db.comments.find())
+    return render_template('index.html', books=books, comments=comments)
 
 # REGISTER------------------------------------
 @app.route("/register", methods=["GET", "POST"])
@@ -74,12 +75,12 @@ def login():
                 return redirect(url_for(
                         "index", username=session["user"]))
             else:
-                    # invalid password
+                # invalid password
                 flash("Incorrect credentials.")
                 return redirect(url_for("login"))
 
         else:
-                # the username is not registered
+            # the username is not registered
             flash("Incorrect credentials")
             return redirect(url_for("login"))
     return render_template('login.html')
@@ -117,6 +118,7 @@ def logout():
 #     return redirect(url_for("/index"))
 
 
+# ADD COMMENT -------------------------
 @app.route("/add_comment/<book_id>", methods=["GET", "POST"])
 def add_comment(book_id):
     book = mongo.db.bookInfo.find_one({"_id": ObjectId(book_id)})
@@ -132,6 +134,18 @@ def add_comment(book_id):
         return redirect(url_for("index"))
 
     return render_template("add_comment.html", book=book)
+
+
+# DELETE COMMENT -----------------
+@app.route("/delete_comment/<comment_id>", methods=["GET", "POST"])
+def delete_comment(comment_id):
+    comments = mongo.db.comments.find_one({"_id": ObjectId(comment_id)})
+    if request.method == "POST":
+        comments.remove({'_id': ObjectId(comment_id)})
+
+        flash("Comment deleted")
+        return redirect(url_for("index"))
+    return render_template("delete_comment.html", comments=comments)
 
 
 if __name__ == '__main__':
