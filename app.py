@@ -2,6 +2,7 @@ from flask_pymongo import PyMongo
 from flask import Flask, flash, render_template, redirect, request, url_for, \
     session, flash, Markup
 from forms import RegistrationForm, LoginForm
+from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
 import os
 from os import path
@@ -116,20 +117,22 @@ def logout():
 #     return redirect(url_for("/index"))
 
 
-@app.route("/add_comment", methods=["GET", "POST"])
-def add_comment():
+@app.route("/add_comment/<book_id>", methods=["GET", "POST"])
+def add_comment(book_id):
+    book = mongo.db.bookInfo.find_one({"_id": ObjectId(book_id)})
     if request.method == "POST":
         new_comment = {
+            "title": book["title"],
             "comment": request.form.get("comment"),
-            "username": session["username"]
+            "username": session["user"]
         }
 
-        mongo.db.books.comments.comment.insert_one(new_comment)
+        mongo.db.comments.insert_one(new_comment)
         flash("Comment added")
         return redirect(url_for("index"))
 
-    comment = mongo.db.books.comments.comment.find().sort("comment", 1)
-    return render_template("add_comment.html", comment=comment)
+    comment = mongo.db.comments.comment.find().sort("comment", 1)
+    return render_template("add_comment.html", book=book, comment=comment)
 
 
 if __name__ == '__main__':
