@@ -29,7 +29,8 @@
             <p class="book-details"><italic>Comment:</italic> {{ comment.comment }} </p>   
             
             {% if comment.username==session.user %}
-               <button class="custom-btn btn" type="submit"  href="{{ url_for('delete_comment', comment_id=comment._id) }}" role="button">Delete</button>
+                <a class="custom-btn btn" type="submit"  href="{{ url_for('delete_comment', comment_id=comment._id) }}">Delete</a>
+                <a class="custom-btn btn" type="submit"  href="{{ url_for('update_comment', comment_id=comment._id) }}">Update</a>
             {% endif %}
 
         {% endif %}
