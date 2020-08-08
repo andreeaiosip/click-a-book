@@ -131,8 +131,7 @@ def add_comment(book_id):
         flash("Comment added")
         return redirect(url_for("index"))
 
-    comment = mongo.db.comments.comment.find().sort("comment", 1)
-    return render_template("add_comment.html", book=book, comment=comment)
+    return render_template("add_comment.html", book=book)
 
 
 if __name__ == '__main__':
