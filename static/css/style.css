@@ -2,6 +2,7 @@
 body, html {
 	height: 100%;
 	margin: 0;
+    color: #4c3c35;
 
   }
   body {
@@ -133,6 +134,7 @@ nav {
 
 .user-comment-display {
     background-color: #efddd336;
+    font-weight: 600;
     margin-top: 7px;
     border-radius: 3px;
     padding: 6px;
@@ -145,8 +147,7 @@ nav {
     padding: 20px;
 }
 .container-books {
-    border-bottom: 2px solid #8c734e;
-    /* background-color: #e3d8c3; */
+    border-bottom: 2px solid #d1a18b66;
     border-radius: 7px;
     padding: 20px;
 }
