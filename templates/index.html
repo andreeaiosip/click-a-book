@@ -24,9 +24,10 @@
     {% for comment in comments %}
 
         {% if comment.title==book.title %}
-
+    <div>
             <p><span >Posted by:</span>  {{ comment.username }} </p>
             <p class="book-details"><italic>Comment:</italic> {{ comment.comment }} </p>   
+    </div>
             
             {% if comment.username==session.user %}
                 <a class="custom-btn btn" type="submit"  href="{{ url_for('delete_comment', comment_id=comment._id) }}">Delete</a>
@@ -39,7 +40,7 @@
 
 
     <a class="custom-btn btn" type="submit"  href="{{ url_for('add_comment', book_id=book._id) }}" role="button">Add comment</a>
-    <hr>
+   
     <div>
         
   
