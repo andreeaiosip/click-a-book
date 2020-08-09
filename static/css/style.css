@@ -70,7 +70,8 @@ a.navbar-brand {
 
 .navbar {
     background: rgb(220 152 132);
-    background: linear-gradient(180deg, #b169479e 7%, rgb(226 171 145) 48%, rgb(227 198 185) 100%);}
+    background: linear-gradient(180deg, #b169479e 7%, rgb(226 171 145) 48%, rgb(227 198 185) 100%);
+    }
 
 /* The code below is a formula to overwrite bootstrap toggler colour taken from GiHub https://github.com/css/csso/issues/377 */
 
@@ -120,16 +121,22 @@ nav {
 
 .alert{
     margin-bottom: 0px;
-    background-color: #f79738;
+    background-color: #f8da0587;
 }
 
 .alert>p{
-    color: #eeeeee; 
+    color: #000000; 
     text-align: center;
     font-weight: 600;
     margin: 0;
 }
 
+.user-comment-display {
+    background-color: #eee2dc;
+    border-radius: 3px;
+    padding: 6px;
+    border-bottom: 1px solid #b6907d;
+}
 
 .card-profile {
     max-width: 80vw; 
@@ -179,7 +186,8 @@ font-weight: 700;
 .row-icon {
 	height: 60px;;
 	width: auto;
-	background-color: #d2b296;
+	 background: rgb(220 152 132);
+    background: linear-gradient(180deg, #b169479e 7%, rgb(226 171 145) 48%, rgb(227 198 185) 100%);
 	border-top-left-radius: 15px;
 	border-top-right-radius: 15px;
 	border-bottom-right-radius: 0px;
