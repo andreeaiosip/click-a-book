@@ -1,7 +1,7 @@
 from flask_pymongo import PyMongo
 from flask import Flask, flash, render_template, redirect, request, url_for, \
     session, flash, Markup
-from forms import RegistrationForm, LoginForm
+# from forms import RegistrationForm, LoginForm
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
 import os
@@ -46,14 +46,14 @@ def register():
 
         register = {
             "username": request.form.get("username").lower(),
-            "password": generate_password_hash(request.form.get("password")) 
+            "password": generate_password_hash(request.form.get("password"))
         }
         mongo.db.users.insert_one(register)
 
          # put the user in session cookie
         session["user"] = request.form.get("username").lower()
         flash("Registration sucessfull")
-        return redirect(url_for("profile", username=session["user"]))
+        return redirect(url_for("index", username=session["user"]))
     return render_template("register.html")
 
 # LOGIN-----------------------------------------------------
@@ -112,11 +112,13 @@ def logout():
 
 # DELETE PROFILE ------------------------------
 
-# @app.route("/delete_profile/<user_id>")
-# def delete_profile(user_id):
-#     mongo.db.users.remove({"_id": ObjectId(user_id)})
-#     flash("Your profile has been deleted.")
-#     return redirect(url_for("/index"))
+@app.route("/delete_profile/<user_id>", methods=["GET", "POST"])
+def delete_profile(user_id):
+    delete_user = mongo.db.users
+    delete_user.remove({'_id': ObjectId(user_id)})
+    session.clear()
+    flash("Your profile has been deleted.")
+    return redirect(url_for("/index"))
 
 
 # ADD COMMENT -------------------------
