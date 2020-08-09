@@ -132,10 +132,11 @@ nav {
 }
 
 .user-comment-display {
-    background-color: #eee2dc;
+    background-color: #efddd336;
+    margin-top: 7px;
     border-radius: 3px;
     padding: 6px;
-    border-bottom: 1px solid #b6907d;
+    border-bottom: 1px solid #ecded7b3;
 }
 
 .card-profile {
@@ -211,9 +212,9 @@ font-weight: 700;
 }
 
 .custom-btn {
-	background-color: #8c734e;
-	border-color: #F6FEDB;
+	background-color: #d1a28b;
     color: #fafafa;
+    margin-top: 5px;
 }
 
 .footer-registration {

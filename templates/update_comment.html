@@ -6,10 +6,10 @@
 <div class="container comment-container mx-auto">
 	<form method="POST" action="{{ url_for('update_comment', comment_id=comments._id) }}">
 		<div class="form-group">
-			<label>Update your comment</label>
+			<label>Edit comment</label>
 			<textarea class="form-control" id="comment" name="comment" minlength="5" maxlength="300" rows="3" required>{{comments.comment}}</textarea>
 		</div>
-        <button type="submit" class="custom-btn btn">Update Comment</button>
+        <button type="submit" class="custom-btn btn btn-sm">Edit Comment</button>
     </form>
 </div>
 {% endblock %}
