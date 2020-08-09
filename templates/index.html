@@ -20,7 +20,7 @@
             <p><span class="book-details">Genre:</span>  {{ book.genre }}</p> 
             <p><span class="book-details">Published:</span>  {{ book.year }}</p>
             <p><span class="book-details">Synopsis:</span> {{ book.synopsis }}</p> 
-
+{% if session.user %}
     {% for comment in comments %}
 
         {% if comment.title==book.title %}
@@ -37,7 +37,7 @@
 
     {% endfor %} 
 
-{% if session.user %}
+
     <a class="custom-btn btn" type="submit"  href="{{ url_for('add_comment', book_id=book._id) }}" role="button">Add comment</a>
     <hr>
     <div>
