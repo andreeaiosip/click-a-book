@@ -69,9 +69,8 @@ a.navbar-brand {
 }
 
 .navbar {
-    background: rgb(175 143 78);
-    background: linear-gradient(180deg, #6451199e 7%, rgb(209 168 106) 48%, rgb(192 179 170) 100%); 
-}
+    background: rgb(220 152 132);
+    background: linear-gradient(180deg, #b169479e 7%, rgb(226 171 145) 48%, rgb(227 198 185) 100%);}
 
 /* The code below is a formula to overwrite bootstrap toggler colour taken from GiHub https://github.com/css/csso/issues/377 */
 
