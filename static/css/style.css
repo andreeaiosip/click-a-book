@@ -68,6 +68,10 @@ a.navbar-brand {
 	font-weight: 600;
 }
 
+.navbar {
+    background: rgb(175 143 78);
+    background: linear-gradient(180deg, #6451199e 7%, rgb(209 168 106) 48%, rgb(192 179 170) 100%); 
+}
 
 /* The code below is a formula to overwrite bootstrap toggler colour taken from GiHub https://github.com/css/csso/issues/377 */
 
@@ -117,10 +121,11 @@ nav {
 
 .alert{
     margin-bottom: 0px;
+    background-color: #f79738;
 }
 
 .alert>p{
-    color: #cf551a; 
+    color: #eeeeee; 
     text-align: center;
     font-weight: 600;
     margin: 0;
