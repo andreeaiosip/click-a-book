@@ -25,18 +25,18 @@ _Value provided_:
 
 **THE IDEA**
 
-_click a book_ is a books review website where users can share their love for reading by adding new books and review books.
+_click a book_ is a website of a book club set up by the founders of the book club. They post suggestions of books for the next meetup and members can log in and pick the book they are interested in reading for the next meetup.
 
  I have chose this theme for the website because I like reading books and I think I can understand better how a user will navigate the site and what are their expectations when they open the website. 
 
 ### The need:
 
-Book club members can comment and review books on the site.
+Only registered  members can comment on books on the site.
 
 ### The goals of this website are:
 
-* Provide a clean feel and easy to navigate website, on mobile and desktop;
-* Offer a wide range of lyrics to the user;
+* Provide a clean feel and easy to navigate website, on mobile and desktop.
+* Provide a choice of books to the book club members and they can pick to read for their next book club.
 
 ***
 
@@ -45,6 +45,7 @@ Book club members can comment and review books on the site.
 Common characteristics of a user:
 
 * Avid reader who likes discovering new books, sharing their reading list and review books.
+* Book club member or someone who is interested in joining the book club.
 
 #### Design and colors
 
@@ -63,8 +64,6 @@ I have used the website [Coolors.co](https://coolors.co/) to create the color sc
 
 #### Design wireframes / mock-ups:
 
-The home page will have images with books from different genres, a search bar to find books and review
-
 Click on the below links to see the wireframes or you can view them in the  [wireframes]() folder.
 
 #### Initial Wireframes
@@ -80,19 +79,13 @@ Click on the below links to see the wireframes or you can view them in the  [wir
 
 * *As a registered user*, I want to navigate my way easy on the website, to browse around through the content.
 
-* As a _registered user_ I would like to be able to look up for a book quickly using the keywords as the book title, author or genre.
-
 * As a _registered user_ I would like to be able to log in and log from my account to keep it secure and private.
 
 * As a _registered user_ I would like to be able to delete my account at any point.
 
-* As a _registered user_ I would like to be able to share my reviews on books.
+* As a _registered user_ I would like to be able to comment on books.
 
 * As a _registered user_ I would like to be able to view, delete and edit/update any review I have posted on the web app.
-
-* As a _registered user_ I would like to be able to vote for a book that I liked.
-
-* As a _registered user_ I would like to be able to see all the content I have posted on the web app on my personal profile page.
 
   
 
@@ -119,11 +112,6 @@ _______________________________________
 #### Logo 
 
 I have created the logo for _click a book_ web app with [Canva](https://www.canva.com/). 
-
-####  Search content filter
-
-When the user is searching for a certain book, the user can use the filter to look up by author, book title or genre.
-
 
 
 #### FEATURES left to implement
