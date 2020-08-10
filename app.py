@@ -9,21 +9,11 @@ from os import path
 if path.exists("env.py"):
     import env
 
-
-# MONGO_URI = os.environ.get("MONGO_URI")
-# SECRET_KEY = os.environ.get('SECRET_KEY')
-
 app = Flask(__name__)
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
-# print("I'm a db", os.environ.get("MONGO_URI"))
 app.config['SECRET_KEY'] = os.urandom(32)
-# Variables for database
+
 mongo = PyMongo(app)
-
-# Collections
-
-# usersDB = mongo.db.users
-# books = mongo.db.bookInfo
 
 
 @app.route('/')
