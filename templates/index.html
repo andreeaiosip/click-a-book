@@ -32,7 +32,7 @@
             {% if comment.username==session.user %}
 
             <!------- Delete comment button modal trigger ------------>
-                <a class="custom-btn btn btn-sm" type="submit" data-toggle="modal" data-target="#deleteModal" >Delete</a>
+                <a class="custom-btn btn btn-sm delete-modal" type="submit" data-toggle="modal" data-target="#deleteModal" >Delete</a>
                 <a class="custom-btn btn btn-sm" type="submit" href="{{ url_for('update_comment', comment_id=comment._id) }}">Update</a>
 
 
