@@ -94,7 +94,7 @@ def profile(username):
 @app.route("/logout")
 def logout():
     # remove user from current session cookie
-    
+
     flash("You have been logged out. See you soon!")
     session.pop("user")
     return redirect(url_for("login"))
@@ -104,11 +104,10 @@ def logout():
 
 @app.route("/delete_profile/<user_id>", methods=["GET", "POST"])
 def delete_profile(user_id):
-    delete_user = mongo.db.users
-    delete_user.remove({'_id': ObjectId(user_id)})
+    mongo.db.users.remove({"username": session["user"]})
     session.clear()
     flash("Your profile has been deleted.")
-    return redirect(url_for("/index"))
+    return redirect(url_for("index"))
 
 
 # ADD COMMENT -------------------------

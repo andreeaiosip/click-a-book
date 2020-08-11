@@ -8,13 +8,32 @@
    </div>
 </div>
 <div class="card card-profile border-secondary mb-3 mx-auto">
-   <div>
+    <div>
       <h5 >Your username is: {{ username }}</h5>
       <p class="card-text">
       <hr>
       You don't want to have a profile on our website anymore? No worries, you can delete your profile by clicking the button below.</p>
-   </div>
-   <div class="card-footer bg-transparent border-secondary mx-auto"><button type="button" class="btn btn-danger">Delete Profile</button></div>
+    </div>
+    <div class="card-footer bg-transparent border-secondary mx-auto">
+    <!-- Trigger modal confirmation deletion profile  ------->
+        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal">Delete Profile</button>
+    </div>
+</div>
+
+<!-- Modal body ---------->
+
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModal" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        Do you wish to delete your profile?
+      </div>
+      <div class="modal-footer">
+        <a href="{{ url_for('delete_profile', user_id=username) }}" type="button" class="btn btn-danger" >Delete</a>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
+      </div>
+    </div>
+  </div>
 </div>
 {% endblock %}
 

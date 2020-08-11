@@ -40,7 +40,7 @@
                 </li>
                 {% if session.user %}
                 <li class="nav-item">
-                    <a class="nav-link hvr-box-shadow-outset" href="{{ url_for('profile', username=session['user']) }}">
+                    <a class="nav-link hvr-box-shadow-outset" href="{{ url_for('profile', username=session['user'])}}">
                         <i class="fa fa-fw fa-user" aria-hidden="true"></i>
                         MY PROFILE
                     </a>
