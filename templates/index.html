@@ -30,8 +30,27 @@
     </div>
             
             {% if comment.username==session.user %}
-                <a class="custom-btn btn btn-sm" type="submit"  href="{{ url_for('delete_comment', comment_id=comment._id) }}">Delete</a>
-                <a class="custom-btn btn btn-sm" type="submit"  href="{{ url_for('update_comment', comment_id=comment._id) }}">Update</a>
+
+            <!------- Delete comment button modal trigger ------------>
+                <a class="custom-btn btn btn-sm" type="submit" data-toggle="modal" data-target="#deleteModal" >Delete</a>
+                <a class="custom-btn btn btn-sm" type="submit" href="{{ url_for('update_comment', comment_id=comment._id) }}">Update</a>
+
+
+                    <!-- Modal body ----------------->
+                <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModal" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                    <div class="modal-body">
+                        Do you wish to delete this comment?
+                    </div>
+                    <div class="modal-footer">
+                         <a class="btn btn-danger" type="submit"  href="{{ url_for('delete_comment', comment_id=comment._id) }}">Delete</a>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
+                    </div>
+                    </div>
+                </div>
+                </div>
+                
             {% endif %}
 
         {% endif %}
