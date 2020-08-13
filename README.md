@@ -35,10 +35,10 @@ The book club founder wants to have a platform where the book club members can s
 
 ### The goals of this website are:
 
+* The books  on the website are posted by the book club founder through the MongoDB Database and fetched on the website.
+*  Provide a choice of books to the book club members, so they can pick which book they would like to read for their next book club meetup.
 * Only registered  members can see the comments posted by other users or post their comments  on the site.
-* Provide a choice of books to the book club members, so they can pick which book they would like to read for their next book club meetup.
 * Provide a clean feel and easy to navigate website, on all screen sizes.
-* 
 
 ***
 
@@ -60,17 +60,18 @@ I have used two fonts, _Open Sans_ for general text displayed on the site. It's 
 ##### Colour Scheme
 
 I wanted the user to get a sense of calmness and warmth when they open the website. To invite them to think about the feel and look of the books they have read or they will like to read. 
+I have used the website [Coolors.co](https://coolors.co/) to create the colour scheme. I have used #e3c6b9 ![##e3c6b9](https://placehold.it/15/e3c6b9/000000?text=+) , #F6FEDB ![#F6FEDB](https://placehold.it/15/F6FEDB/000000?text=+), \#f4f4f4![#f4f4f4](https://placehold.it/15/f4f4f4/000000?text=+) as main colours. 
 
-They background, I have started trying different colours for the text.
-I have used the website [Coolors.co](https://coolors.co/) to create the colour scheme. I have used #e3c6b9 ![##e3c6b9](https://placehold.it/15/e3c6b9/000000?text=+) , #F6FEDB ![#F6FEDB](https://placehold.it/15/F6FEDB/000000?text=+), \#f4f4f4![#f4f4f4](https://placehold.it/15/f4f4f4/000000?text=+) as main colours.
+These colours bring a sense of calmness and cleanness for the reader to put them in a peaceful  state when they read through the website.
 
 #### Design wireframes / mock-ups:
 
 Click on the below links to see the wireframes or you can view them in the  [wireframes]() folder.
 
-#### Initial Wireframes
+#### Wireframes
 
 * **[Desktop view](https://github.com/andreeaiosip/click-a-book/tree/master/documentation/wireframes/desktop)**
+* **[Mobile view](https://github.com/andreeaiosip/click-a-book/tree/master/documentation/wireframes/mobile)**
 
 
 #### Client stories:
@@ -142,6 +143,8 @@ I have created this website with the help of a multiple technologies:
 
 * [jQuery](https://jquery.com/)
 
+* git
+
 * [Visual Studio Code](https://code.visualstudio.com/)
 
 * [Bootstrap](https://getbootstrap.com/)
@@ -162,7 +165,7 @@ I have created this website with the help of a multiple technologies:
 
 ### Deployment
 
-This project was developed using the Visual Studio Code, committed to git and pushed to GitHub using GitHub Desktop.
+This project was developed using the Visual Studio Code, committed to git and pushed to GitHub using the terminal in Visual Studio code and Github Desktop.
 
 
 
