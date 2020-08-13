@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="hero-image">
+   <div class="hero-text">
+      <h5>“You know you’ve read a good book when you turn the last page and feel a little as if you have lost a friend.” </h5>
+   </div>
+</div>
+<div class="card card-profile border-secondary mb-3 mx-auto">
+   <div>
+      <h5 >Your username is: {{ username }}</h5>
+      <p class="card-text">
+      <hr>
+      You don't want to have a profile on our website anymore? No worries, you can delete your profile by clicking the button below.</p>
+   </div>
+   <div class="card-footer bg-transparent border-secondary mx-auto" ><button type="button" href="#modalDelete" class="btn btn-danger">Delete Profile</button></div>
+</div>
+
+<div id="modalDelete" class="modal">
+    <div class="modal-content">
+      <h4>Delete Profile</h4>
+      <p>Click the Delete button to confirm deletion of your account. <br>
+      Beware this is permanent!</p>
+    </div>
+    <div class="modal-footer">
+      <a href="{{ url_for('delete_profile', user_id=user._id) }}" class="modal-close btn-danger">Delete</a>
+    </div>
+  </div>
+{% endblock %}
+
