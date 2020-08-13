@@ -31,12 +31,14 @@ _click a book_ is a website of a book club set up by the founders of the book cl
 
 ### The need:
 
-Only registered  members can comment on books on the site.
+The book club founder wants to have a platform where the book club members can see her book suggestions for the next meetup. This way they can pick their favourite and they can comment on it why they would like to read that book.
 
 ### The goals of this website are:
 
-* Provide a clean feel and easy to navigate website, on mobile and desktop.
-* Provide a choice of books to the book club members and they can pick to read for their next book club.
+* Only registered  members can see the comments posted by other users or post their comments  on the site.
+* Provide a choice of books to the book club members, so they can pick which book they would like to read for their next book club meetup.
+* Provide a clean feel and easy to navigate website, on all screen sizes.
+* 
 
 ***
 
@@ -47,7 +49,7 @@ Common characteristics of a user:
 * Avid reader who likes discovering new books, sharing their reading list and review books.
 * Book club member or someone who is interested in joining the book club.
 
-#### Design and colors
+#### Design and colours
 
 ##### Fonts
 
@@ -55,12 +57,12 @@ For logo I have used two fonts: _Merryweather_ and _Old Standard_ to emphasise t
 
 I have used two fonts, _Open Sans_ for general text displayed on the site. It's easy to read and looks good on all devices. Where I need to put more emphasis on a piece of text, I have used Libre Baskerville. Because is a books/reading related website, I think it fits well with the theme.
 
-##### Color Scheme
+##### Colour Scheme
 
 I wanted the user to get a sense of calmness and warmth when they open the website. To invite them to think about the feel and look of the books they have read or they will like to read. 
 
-They background, I have started trying different colors for the text.
-I have used the website [Coolors.co](https://coolors.co/) to create the color scheme. I have used #DCC48E ![#DCC48E](https://placehold.it/15/DCC48E/000000?text=+) , #F6FEDB ![#F6FEDB](https://placehold.it/15/F6FEDB/000000?text=+),  #6C5A49![#6C5A49](https://placehold.it/15/6C5A49/000000?text=+), #F0B67F![#F0B67F](https://placehold.it/15/F0B67F/000000?text=+) , #8c734e![#8c734e](https://placehold.it/15/8c734e/000000?text=+) as main colors,
+They background, I have started trying different colours for the text.
+I have used the website [Coolors.co](https://coolors.co/) to create the colour scheme. I have used #e3c6b9 ![##e3c6b9](https://placehold.it/15/e3c6b9/000000?text=+) , #F6FEDB ![#F6FEDB](https://placehold.it/15/F6FEDB/000000?text=+), \#f4f4f4![#f4f4f4](https://placehold.it/15/f4f4f4/000000?text=+) as main colours.
 
 #### Design wireframes / mock-ups:
 
@@ -77,15 +79,21 @@ Click on the below links to see the wireframes or you can view them in the  [wir
 
 * As a _general user_, I want to be able to create an account with password protected.
 
+* As a _general user_, I want to be able to read synopsis of the books the book club founder posted on the website.
+
 * *As a registered user*, I want to navigate my way easy on the website, to browse around through the content.
 
-* As a _registered user_ I would like to be able to log in and log from my account to keep it secure and private.
+* As a _registered user_ I would like to be able to log in and log out from my account to keep it secure and private.
 
 * As a _registered user_ I would like to be able to delete my account at any point.
 
 * As a _registered user_ I would like to be able to comment on books.
 
-* As a _registered user_ I would like to be able to view, delete and edit/update any review I have posted on the web app.
+* As a _registered user_ I would like to be able delete comments I've posted.
+
+* As a _registered user_ I would like to be able update any comments I've posted.
+
+* As a _registered user_ I would like to be able delete any comments I've posted.
 
   
 
@@ -182,4 +190,3 @@ This project was developed using the Visual Studio Code, committed to git and pu
 #### Disclaimer
 
 The content of this Website is for educational purposes only.
-
