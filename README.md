@@ -1,10 +1,9 @@
 <h1 align="center"> click a book</h1>
-<div>
 <h2 align="center">
     <a  href=""  target="_blank"><img  src="/documentation/gifs-view/desktop.png"  alt="click-a-book desktop screen"/></a>
+<br>
     <a  href=""  target="_blank"><img  src="/documentation/gifs-view/mobile.gif" alt="click-a-book mobile Screen"/></a>
 </h2>
-</div>
 <h2 align="center"> click a book</h2>
 
 
@@ -42,7 +41,7 @@ The book club founder wants to have a platform where the book club members can s
 ### The goals of this website are:
 
 * The books  on the website are posted by the book club founder through the MongoDB Database and fetched on the website.
-*  Provide a choice of books to the book club members, so they can pick which book they would like to read for their next book club meetup.
+* Provide a choice of books to the book club members, so they can pick which book they would like to read for their next book club meetup.
 * Only registered  members can see the comments posted by other users or post their comments  on the site.
 * Provide a clean feel and easy to navigate website, on all screen sizes.
 
@@ -80,7 +79,7 @@ Click on the below links to see the wireframes or you can view them in the  [wir
 * **[Mobile view](https://github.com/andreeaiosip/click-a-book/tree/master/documentation/wireframes/mobile)**
 
 
-#### Client stories:
+#### Users stories:
 
 * As a _general user_ I would like to get a clean and calm feel of the website when I open it.
 
