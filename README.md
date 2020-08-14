@@ -1,6 +1,7 @@
 <h1 align="center"> click a book</h1>
 <div>
 <h2 align="center">
+<<<<<<< HEAD
     <a  href=""  target="_blank"><img  src="/documentation/gifs-view/desktop.png"  alt="click-a-book desktop screen"/></a>
     <a  href=""  target="_blank"><img  src="/documentation/gifs-view/mobile.gif" alt="click-a-book mobile Screen"/></a>
 </h2>
