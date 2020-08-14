@@ -1,17 +1,16 @@
-<h1 align="center">
-    <a  href=""  target="_blank"><img  src="click-a-book/documentation/gifs-view/desktop.gif"  alt="click-a-book desktop screen"/></a>
-    <a  href=""  target="_blank"><img  src="click-a-book/documentation/gifs-view/mobile-view.gif" alt="click-a-book mobile Screen"/></a>
-</h1>
+<h1 align="center"> click a book</h1>
+<div>
+<h2 align="center">
+    <a  href=""  target="_blank"><img  src="/documentation/gifs-view/desktop.gif"  alt="click-a-book desktop screen"/></a>
+    <a  href=""  target="_blank"><img  src="/documentation/gifs-view/mobile.gif" alt="click-a-book mobile Screen"/></a>
+</h2>
+</div>
 <h2 align="center"> click a book</h2>
+
 
 **click a book**  is a website of for a fictional book club set up by the founders of the book club. 
 
 ***
-
-<h1 align="center">
-<a  href=""  target="_blank"><img  src="click-a-book/documentation/gifs-view/desktop.gif"  alt="click-a-book desktop screen"/></a>
-<a  href=""  target="_blank"><img  src="click-a-book/documentation/gifs-view/mobile-view.gif" alt="click-a-book mobile Screen"/></a>
-</h1>
 
 This project is created for the Practical Python and Data-Centric Development module at the **Full Stack Software Development Course** with **Code Institute**.
 
