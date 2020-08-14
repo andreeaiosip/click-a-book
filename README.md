@@ -248,23 +248,24 @@ Click on green button on the right with 'code' and  an arrow on it
 
 ### Live Deployment on Heroku
 
-This app is currently deployed on heroku. The deployment is the code stored on the master branch of the project on GitHub. To deploy this project to Heroku required the following steps:
-
+The project from GitHub is deployed and set live on Heroku. To deploy this project to Heroku I followed the 
+ steps below and I have watched this [tutorial](https://www.youtube.com/watch?v=GgNcs9zlFSA).
+ 
 1. Sign up for Heroku and sign in to create a new app
 2. Click the "New" button to create a new app
 3. Give a name to the app and specify the region
 4. Generate a requirement.txt file to inform Heroku of what dependencies are needed to run the app. In the terminal `pip3 freeze --local > requirements.txt`
 5. You need to create a Procfile file type to inform Heroku what type of app is being deployed `echo web: python run.py > Procfile`
-6. At the deployment tab of the app in Heroku click the Heroku GIT method for deployment.
+6. At the deployment tab of the app in Heroku click the Heroku git method for deployment.
 7. In the terminal of you IDE type the commands:
 
 ```
 $ heroku login
-$ heroku git:remote -a <karaokean>
+$ heroku git:remote -a <click-a-book>
 $ git push heroku master
 ```
 
-1. In the Heroku settings tab, click on the "Real Config Vars" button to set environmental variables:
+8. In the Heroku settings tab, click on the "Real Config Vars" button to set environmental variables:
 
 - IP: `0.0.0.0`
 - PORT: `5000`
