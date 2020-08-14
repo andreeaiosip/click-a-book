@@ -202,23 +202,31 @@ To save my code on your machine, you have to follow the below steps:
 
 **Clone the project on your machine**
 
-1. Go to [click-a-book](https://github.com/andreeaiosip/click-a-book#click-a-bookhttpclick-a-bookherokuappcom)
+Go to [click-a-book](https://github.com/andreeaiosip/click-a-book#click-a-bookhttpclick-a-bookherokuappcom)
 
-2. Click on green button on the left with 'code' and  an arrow on it
+Click on green button on the left with 'code' and  an arrow on it
 
-3. Copy the clone URL for the repository in the 'Clone with HTTPs section'.
+*Option 1*
 
-4. Open 'Git Bash' in your local IDE.
+- Copy the clone URL for the repository in the 'Clone with HTTPs section'.
 
-5. Choose the folder you want to clone the project in.
+- Open your git bash
 
-6. Type `git clone`, then paste the URL you copied in Step 3:
+- Choose the folder you want to clone the project in.
 
-   `git clone https://github.com/andreeaiosip/click-a-book`
+- Type `git clone`, then paste the URL you copied in Step 3:
 
-7. Press `Enter` to save the cloned project
+  `git clone https://github.com/andreeaiosip/click-a-book`
 
-   
+- Press `Enter` to save the cloned project
+
+  
+
+  *Option 2*
+
+  Save the files as a zip and unzip it in a folder of your choice.
+
+
 
 **Create a database in MongoDB**
 
