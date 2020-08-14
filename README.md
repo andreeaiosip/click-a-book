@@ -124,8 +124,9 @@ Click on the below links to see the wireframes or you can view them in the  [wir
 
 ### Database Design
 
-
-
+<h2 align="center">
+    <a href="" target="_blank"><img src="/documentation/DBSchema.PNG" alt="click-a-book db-schema"/></a>  
+</h2>
 _______________________________________
 
 
