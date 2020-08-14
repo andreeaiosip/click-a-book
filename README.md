@@ -186,16 +186,13 @@ I have created this website with the help of a multiple technologies:
 
 ***
 
-### Deployment
+#### Deployment
 
-At the beginning I have started the development on my machine with Visual Studio code and I was saving  regularly the code 
-in a repository I have created on GitHub. When I have connected my MongoDB to my app, I have started using Gitpod online IDE.
+At the beginning I have started the development on my machine with Visual Studio code and I was saving  regularly the code in a repository I have created on GitHub. When I have connected my MongoDB to my app, I have started using Gitpod online IDE.
 
-To make sure the data is linked and displayed correctly I have created an account on Heroku and deployed my web app live. 
-This helped me with the debugging part as well.
+To make sure the data is linked and displayed correctly I have created an account on Heroku and deployed my web app live. This helped me with the debugging part as well.
 
-
-##### How to run this project locally:
+### Running the project locally
 
 To run this web app locally on your machine you need to have these technologies in place:
 
@@ -203,7 +200,46 @@ To run this web app locally on your machine you need to have these technologies 
 - [PIP](https://pip.pypa.io/en/stable/)
 - An IDE - Visual Studio Code or online Gitpod
 - [git](https://www.atlassian.com/git/tutorials/install-git)
-- [MongoDB](https://www.mongodb.com/) - database
+- [MongoDB](https://www.mongodb.com/) 
+
+To save my code on your machine, you have to follow the below steps:
+
+**Clone the project on your machine**
+
+1. Go to [click-a-book](https://github.com/andreeaiosip/click-a-book#click-a-bookhttpclick-a-bookherokuappcom)
+
+2. Click on green button on the left with 'code' and  an arrow on it
+
+3. Copy the clone URL for the repository in the 'Clone with HTTPs section'.
+
+4. Open 'Git Bash' in your local IDE.
+
+5. Choose the folder you want to clone the project in.
+
+6. Type `git clone`, then paste the URL you copied in Step 3:
+
+   `git clone https://github.com/andreeaiosip/click-a-book`
+
+7. Press `Enter` to save the cloned project
+
+   
+
+**Create a database in MongoDB**
+
+1. Go to [MongoDB](https://www.mongodb.com/) and create an account
+2. Create a new Database (called _books_) in MongoDB - Here's a useful [video tutorial](https://www.youtube.com/watch?v=rE_bJl2GAY8) if you don't know how to use MongoDB 
+3. Create collections for _users_, _bookInfo_ and _comments_ - please follow the format as in my database schema:
+
+**Link local project with MongoDB**
+
+1. Go to your IDE  and open the clone project and add your MongoDB URI in the following format:
+
+   `MONGO_URI="<details here>"`
+
+2. In the terminal, run the `pip3 install -r requirements.txt` command to install the requirements.txt file.
+
+3. You will be able to run the app locally using the `python3 run.py` command.
+
 
 ***
 
