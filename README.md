@@ -188,14 +188,22 @@ I have created this website with the help of a multiple technologies:
 
 ### Deployment
 
-This project was developed using the Visual Studio Code, committed to git and pushed to GitHub using the terminal in Visual Studio code and Github Desktop.
+At the beginning I have started the development on my machine with Visual Studio code and I was saving  regularly the code 
+in a repository I have created on GitHub. When I have connected my MongoDB to my app, I have started using Gitpod online IDE.
 
-
+To make sure the data is linked and displayed correctly I have created an account on Heroku and deployed my web app live. 
+This helped me with the debugging part as well.
 
 
 ##### How to run this project locally:
 
+To run this web app locally on your machine you need to have these technologies in place:
 
+- [Python3](https://www.python.org/downloads/) to run the app.py files and the application
+- [PIP](https://pip.pypa.io/en/stable/)
+- An IDE - Visual Studio Code or online Gitpod
+- [git](https://www.atlassian.com/git/tutorials/install-git)
+- [MongoDB](https://www.mongodb.com/) - database
 
 ***
 
