@@ -127,6 +127,15 @@ _______________________________________
 
 
 ### FEATURES
+Admin Panel for the book club founder, so he can have control over the data through the site itself, not only though database.
+
+Like an Unlike buttons for each book, so users can vote for their favourite book.
+
+Forms for users to submit book suggestions.
+
+When the users deletes their profile, their comments to be deleted as well.
+
+
 
 #### EXISTING FEATURES
 
@@ -137,7 +146,10 @@ I have created the logo for _click a book_ web app with [Canva](https://www.canv
 
 #### FEATURES left to implement
 
-* 
+- **Admin Panel** for the book club founder, so he can have control over the data through the site itself, not only though database.
+- **Like an Unlike buttons** for each book, so users can vote for their favourite book.
+- **Forms** for users to submit book suggestions.
+- When the users deletes their profile, their comments to be deleted as well.
 
 ### Technologies Used
 
@@ -250,7 +262,7 @@ Click on green button on the right with 'code' and  an arrow on it
 
 The project from GitHub is deployed and set live on Heroku. To deploy this project to Heroku I followed the 
  steps below and I have watched this [tutorial](https://www.youtube.com/watch?v=GgNcs9zlFSA).
- 
+
 1. Sign up for Heroku and sign in to create a new app
 2. Click the "New" button to create a new app
 3. Give a name to the app and specify the region
