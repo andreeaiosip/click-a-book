@@ -35,7 +35,7 @@ _Value provided_:
 
 ***
 
-This web app will use ***\*CRUD\**** operations so the users can create, read, update and delete data from the database (MongoDB) and is hosted on Heroku.com.
+This web app will use **CRUD** operations so the users can create, read, update and delete data from the database (MongoDB) and is hosted on Heroku.com.
 
 **THE IDEA**
 
@@ -204,7 +204,7 @@ To save my code on your machine, you have to follow the below steps:
 
 Go to [click-a-book](https://github.com/andreeaiosip/click-a-book#click-a-bookhttpclick-a-bookherokuappcom)
 
-Click on green button on the left with 'code' and  an arrow on it
+Click on green button on the right with 'code' and  an arrow on it
 
 *Option 1*
 
@@ -221,8 +221,7 @@ Click on green button on the left with 'code' and  an arrow on it
 - Press `Enter` to save the cloned project
 
   
-
-  *Option 2*
+*Option 2*
 
   Save the files as a zip and unzip it in a folder of your choice.
 
@@ -236,13 +235,43 @@ Click on green button on the left with 'code' and  an arrow on it
 
 **Link local project with MongoDB**
 
-1. Go to your IDE  and open the clone project and add your MongoDB URI in the following format:
+1. Go to your IDE  and add your MongoDB URI in the following format:
 
-   `MONGO_URI="<details here>"`
+   - MONGO_URI: `mongodb+srv://<username>:<password>@<cluster_name>.mongodb.net/<database>?retryWrites=true&w=majority`
+   - SERCET_KEY: `<your_value>`
 
 2. In the terminal, run the `pip3 install -r requirements.txt` command to install the requirements.txt file.
 
 3. You will be able to run the app locally using the `python3 run.py` command.
+
+   
+
+### Live Deployment on Heroku
+
+This app is currently deployed on heroku. The deployment is the code stored on the master branch of the project on GitHub. To deploy this project to Heroku required the following steps:
+
+1. Sign up for Heroku and sign in to create a new app
+2. Click the "New" button to create a new app
+3. Give a name to the app and specify the region
+4. Generate a requirement.txt file to inform Heroku of what dependencies are needed to run the app. In the terminal `pip3 freeze --local > requirements.txt`
+5. You need to create a Procfile file type to inform Heroku what type of app is being deployed `echo web: python run.py > Procfile`
+6. At the deployment tab of the app in Heroku click the Heroku GIT method for deployment.
+7. In the terminal of you IDE type the commands:
+
+```
+$ heroku login
+$ heroku git:remote -a <karaokean>
+$ git push heroku master
+```
+
+1. In the Heroku settings tab, click on the "Real Config Vars" button to set environmental variables:
+
+- IP: `0.0.0.0`
+- PORT: `5000`
+- MONGO_URI: `mongodb+srv://<username>:<password>@<cluster_name>.mongodb.net/<database>?retryWrites=true&w=majority`
+- SERCET_KEY: `<your_value>`
+
+On the dashboard click on "Open App" button to view your deployed Heroku app.
 
 
 ***
