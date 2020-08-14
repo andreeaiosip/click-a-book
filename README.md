@@ -1,9 +1,11 @@
 <h1 align="center"> click a book</h1>
+<div align-itmes="center">
 <h2 align="center">
     <a  href=""  target="_blank"><img  src="/documentation/gifs-view/desktop.png"  alt="click-a-book desktop screen"/></a>
 <br>
     <a  href=""  target="_blank"><img  src="/documentation/gifs-view/mobile.gif" alt="click-a-book mobile Screen"/></a>
 </h2>
+</div>
 <h2 align="center"> click a book</h2>
 
 
@@ -24,13 +26,20 @@ _Optional_: Additional libraries and external APIs.
 _Value provided_:
 
 1. Users make use of the site to share their own data with the community, and benefit from having convenient access to the data provided by all other members.
+
 2. The site owner advances their own goals by providing this functionality, potentially by being a regular user themselves. The site owner might also benefit from the collection of the dataset as a whole.
+
+   
+
+   
 
 ***
 
+This web app will use ***\*CRUD\**** operations so the users can create, read, update and delete data from the database (MongoDB) and is hosted on Heroku.com.
+
 **THE IDEA**
 
-_click a book_ is a website of a book club set up by the founders of the book club. They post suggestions of books for the next meetup and members can log in and pick the book they are interested in reading for the next meetup.
+_click a book_ is a web app of a book club set up by the founders of the book club. They post suggestions of books for the next meetup and members can log in and pick the book they are interested in reading for the next meetup.
 
  I have chose this theme for the website because I like reading books and I think I can understand better how a user will navigate the site and what are their expectations when they open the website. 
 
@@ -65,18 +74,20 @@ I have used two fonts, _Open Sans_ for general text displayed on the site. It's 
 ##### Colour Scheme
 
 I wanted the user to get a sense of calmness and warmth when they open the website. To invite them to think about the feel and look of the books they have read or they will like to read. 
-I have used the website [Coolors.co](https://coolors.co/) to create the colour scheme. I have used #e3c6b9 ![##e3c6b9](https://placehold.it/15/e3c6b9/000000?text=+) , #F6FEDB ![#F6FEDB](https://placehold.it/15/F6FEDB/000000?text=+), \#f4f4f4![#f4f4f4](https://placehold.it/15/f4f4f4/000000?text=+) as main colours. 
+I have used the website [Coolors.co](https://coolors.co/) to create the colour scheme. I have used #e3c6b9 ![#e3c6b9](https://placehold.it/15/e3c6b9/000000?text=+) , #F6FEDB ![#F6FEDB](https://placehold.it/15/F6FEDB/000000?text=+) , #f4f4f4![#f4f4f4](https://placehold.it/15/f4f4f4/000000?text=+) as main colours. 
 
 These colours bring a sense of calmness and cleanness for the reader to put them in a peaceful  state when they read through the website.
 
 #### Design wireframes / mock-ups:
 
-Click on the below links to see the wireframes or you can view them in the  [wireframes]() folder.
+At the beginning of the  project, the ideas a bit more complex, but I downsized it, so I can meet the submission deadline. 
+
+Click on the below links to see the wireframes or you can view them in the  [wireframes](/documentation/wireframes) folder.
 
 #### Wireframes
 
-* **[Desktop view](https://github.com/andreeaiosip/click-a-book/tree/master/documentation/wireframes/desktop)**
-* **[Mobile view](https://github.com/andreeaiosip/click-a-book/tree/master/documentation/wireframes/mobile)**
+* **[Desktop view](/documentation/wireframes/desktop)**
+* **[Mobile view](/documentation/wireframes/mobile)**
 
 
 #### Users stories:
