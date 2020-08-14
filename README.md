@@ -1,4 +1,4 @@
-<h1 align="center"> [click a book](http://click-a-book.herokuapp.com/)</h1>
+<h1 align="center">click a book</h1>
 <div align-itmes="center">
 <h2 align="center">
     <a  href=""  target="_blank"><img  src="/documentation/gifs-view/desktop.png"  alt="click-a-book desktop screen"/></a>
@@ -6,7 +6,7 @@
     <a  href=""  target="_blank"><img  src="/documentation/gifs-view/mobile.gif" alt="click-a-book mobile Screen"/></a>
 </h2>
 </div>
-<h2 align="center">[click a book](http://click-a-book.herokuapp.com/)</h2>
+<h2 align="center">click a book</h2>
 
 
 **click a book**  is a website of for a fictional book club set up by the founders of the book club. 
@@ -124,9 +124,8 @@ Click on the below links to see the wireframes or you can view them in the  [wir
 
 ### Database Design
 
-<h2 align="center">
-    <a href="" target="_blank"><img src="/documentation/DBSchema.PNG" alt="click-a-book db-schema"/></a>  
-</h2>
+
+
 _______________________________________
 
 
