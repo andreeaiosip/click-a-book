@@ -143,6 +143,23 @@ When the users deletes their profile, their comments to be deleted as well.
 
 I have created the logo for _click a book_ web app with [Canva](https://www.canva.com/). 
 
+**Navbar**
+
+The navbar has 3 links:
+
+- when the user is not logged in: Home | Register | Login
+
+- when the user is logged in: Home | Profile | Logout
+
+  
+
+**Hero Image** - The image shows at the top of the screen under the navbar on each page.
+
+**Forms** for registration and for logging in.
+
+**Modal** for deletion confirmation. When the user wants to delete their profile or a comment, there is a modal with the option for cancelation or confirmation of deletion.
+
+
 
 #### FEATURES left to implement
 
