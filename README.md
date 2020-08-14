@@ -80,7 +80,7 @@ These colours bring a sense of calmness and cleanness for the reader to put them
 
 #### Design wireframes / mock-ups:
 
-At the beginning of the  project, the ideas a bit more complex, but I downsized it, so I can meet the submission deadline. 
+At the beginning of the  project, the idea was a bit more complex, but I downsized it, so I can meet the submission deadline. 
 
 Click on the below links to see the wireframes or you can view them in the  [wireframes](/documentation/wireframes) folder.
 
@@ -116,15 +116,11 @@ Click on the below links to see the wireframes or you can view them in the  [wir
 
 ***
 
-## Database
-
-### Database Type
-
-
-
 ### Database Design
 
-
+<h2 align="center">
+    <a href="" target="_blank"><img src="/documentation/DBSchema.PNG" alt="click-a-book db-schema"/></a>  
+</h2>
 
 _______________________________________
 
