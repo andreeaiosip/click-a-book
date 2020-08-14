@@ -147,28 +147,35 @@ I have created the logo for _click a book_ web app with [Canva](https://www.canv
 
 I have created this website with the help of a multiple technologies:
 
-* HTML 
+* [HTML](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5) to creating the main structure of my pages.
 
-* CSS 
+* [CSS](https://www.w3.org/Style/CSS/Overview.en.html) for styling my components and layout on the page.
 
-* Python
+* [Python](https://www.python.org/) for the back-end development.
 
-* Flask
+* [PyMongo](https://api.mongodb.com/python/current/) as the Python API for MongoDB to bring the data from the database to the web app.
 
-* [JavaScript](https://www.javascript.com/)
+* [Flask](https://flask.palletsprojects.com/en/1.0.x/) is a Python microframework.
 
-* [jQuery](https://jquery.com/)
+* [Jinja](https://jinja.palletsprojects.com/en/2.10.x/) for templating with Flask and HTML. It simplies the code to avoid repetition and links data from MongoDB.
 
-* git
+* [MongoDB](https://cloud.mongodb.com/) as a database to keep all the records. 
 
-* [Visual Studio Code](https://code.visualstudio.com/)
+* [Visual Studio Code](https://code.visualstudio.com/) and [Gitpod](https://gitpod.com) was used as IDE.
 
-* [Bootstrap](https://getbootstrap.com/)
+* [JavaScript](https://www.javascript.com/) for adding interactivity on the page.
 
-* [Google Fonts](https://fonts.google.com/) 
+* [jQuery](https://jquery.com/) for JavaScript functionality and Materialize.
 
-* [GitHub Desktop](https://desktop.github.com/)
+* [git](https://git-scm.com/) for saving my code in Github.
 
+* [Bootstrap](https://getbootstrap.com/) as a framework to make the web app respnsive.
+
+* [Google Fonts](https://fonts.google.com/) for linking fonts.
+
+* [GitHub Desktop](https://desktop.github.com/) for pushing code from Visual Studio code from my machine to Github.
+
+* [Heroku](https://www.heroku.com/) for hosting and deploying the web app.
   
 
 ***
