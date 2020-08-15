@@ -1,79 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+          <title>Click a Book</title>
+          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+              <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css" />
+            </head>
+            <body>
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Click a Book</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css" />
-</head>
-
-<body>
-	<div>
+                <!-- Flash messages top panel -->
+              <div>
 		{% with messages = get_flashed_messages() %}
             {% if messages %}
                 {% for message in messages %}
                 
-                    <div class="alert flash-message alert-dark" id="alert" role="alert">
-                        <p class="flash-message">{{ message }}</p>
-                    </div>
+                    
+                <div class="alert flash-message alert-dark" id="alert" role="alert">
+                  <p class="flash-message">{{ message }}</p>
+                </div>
                 {% endfor %}
             {% endif %}
 		{% endwith %}
-	</div>
-	<nav class="navbar navbar-expand-lg">
-		<a href="{{ url_for('index') }}" ><img class="logo-img" src="{{ url_for('static', filename='img/logo2.png') }}"> </a>
-        <a class="navbar-brand" href="{{ url_for('index') }}">Click a BOOK</a>
-        <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarToggler">
-            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-                <li class="nav-item active">
-                    <a class="nav-link hvr-box-shadow-outset" href="{{ url_for('index') }}">
-                        <i class="fa fa-fw fa-home" aria-hidden="true"></i>HOME
-                        <span class="sr-only">(current)</span>
-                    </a>
-                </li>
+	<!-- Navbar starts -->
+              </div>
+              <nav class="navbar navbar-expand-lg">
+                <a href="{{ url_for('index') }}" >
+                  <img class="logo-img" src="{{ url_for('static', filename='img/logo2.png') }}">
+                  </a>
+                  <a class="navbar-brand" href="{{ url_for('index') }}">Click a BOOK</a>
+                  <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarToggler">
+                    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                      <li class="nav-item active">
+                        <a class="nav-link hvr-box-shadow-outset" href="{{ url_for('index') }}">
+                          <i class="fa fa-fw fa-home" aria-hidden="true"></i>HOME
+                        
+                          <span class="sr-only">(current)</span>
+                        </a>
+                      </li>
                 {% if session.user %}
-                <li class="nav-item">
-                    <a class="nav-link hvr-box-shadow-outset" href="{{ url_for('profile', username=session['user'])}}">
-                        <i class="fa fa-fw fa-user" aria-hidden="true"></i>
+                <!-- If the user is logged in, they can see the Profile tab on navbar -->
+                      <li class="nav-item">
+                        <a class="nav-link hvr-box-shadow-outset" href="{{ url_for('profile', username=session['user'])}}">
+                          <i class="fa fa-fw fa-user" aria-hidden="true"></i>
                         MY PROFILE
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link hvr-box-shadow-outset"
-                        href="{{ url_for('logout') }}"><i class="fa fa-fw fa-sign-in" aria-hidden="true"></i>LOGOUT</a>
-                </li>
+                    
+                        </a>
+                      </li>
+                      <!-- If the user is logged in, they can see the Logout tab on navbar -->
+                      <li class="nav-item">
+                        <a class="nav-link hvr-box-shadow-outset"
+                        href="{{ url_for('logout') }}">
+                          <i class="fa fa-fw fa-sign-in" aria-hidden="true"></i>LOGOUT
+                        </a>
+                      </li>
                 {% else %}
-                <li class="nav-item">
-                    <a class="nav-link hvr-box-shadow-outset" href="{{ url_for('register') }}">
-                        <i class="fa fa-user-plus" aria-hidden="true"></i>
+                <!-- If the user is not logged in, they can see the Register tab on navbar -->
+                      <li class="nav-item">
+                        <a class="nav-link hvr-box-shadow-outset" href="{{ url_for('register') }}">
+                          <i class="fa fa-user-plus" aria-hidden="true"></i>
                         REGISTER
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link hvr-box-shadow-outset" href="{{ url_for('login') }}">
-                        <i class="fa fa-fw fa-sign-in" aria-hidden="true"></i>
+                        </a>
+                      </li>
+                      <!-- If the user is not logged in, they can see the Login tab on navbar -->
+                      <li class="nav-item">
+                        <a class="nav-link hvr-box-shadow-outset" href="{{ url_for('login') }}">
+                          <i class="fa fa-fw fa-sign-in" aria-hidden="true"></i>
                         LOGIN
-                    </a>
-                </li>
+                    
+                        </a>
+                      </li>
                 {% endif %}
-            </ul>
-        </div>
-	</nav>
-	<!-- Flash Messages -->
+            
+                    </ul>
+                  </div>
+                </nav>
+                <!-- Navbar ends -->
+                <div class="hero-image">
+                    <div class="hero-text">
+                        {% if session.user %}
+                        
+                      <h1>Pick your book choice for next month's bookclub!</h1>
+                        {% else %}
+                        
+                      <h1>Log in to pick your book choice for next month's bookclub!</h1>
+                        {% endif %}
+                     
+                    </div>
+                  </div>
 	{% block content %}
 	{% endblock %}
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
-	<script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
-</body>
-
-</html>
+	
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+                <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+                <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+              </body>
+            </html>
