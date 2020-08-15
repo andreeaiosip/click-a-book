@@ -166,6 +166,8 @@ The navbar has 3 links:
 
 **Buttons** used by the user to interact with the content on the page.
 
+**Flash messages** appear at the top of the screen to notify the user when they perform certain actions: login, logout, add/delete/update messages.
+
 
 
 
