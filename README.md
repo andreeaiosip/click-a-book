@@ -82,7 +82,7 @@ These colours bring a sense of calmness and cleanness for the reader to put them
 
 At the beginning of the  project, the idea was a bit more complex, but I downsized it, so I can meet the submission deadline. 
 
-Click on the below links to see the wireframes or you can view them in the  [wireframes](/documentation/wireframes) folder.
+Click on the below links to see the wireframes or you can view them in the  [wireframes](/documentation/wireframes) folder. These were create with [Balsamiq](https://balsamiq.com/wireframes/?gclid=CjwKCAjwj975BRBUEiwA4whRB9TM6Ift0fUSy8zuYxc6kubGo-Z-_NgB56zcqoXHBgj6VbkIfGjz9RoCfaEQAvD_BwE).
 
 #### Wireframes
 
@@ -122,24 +122,29 @@ Click on the below links to see the wireframes or you can view them in the  [wir
     <a href="" target="_blank"><img src="/documentation/DBSchema.PNG" alt="click-a-book db-schema"/></a>  
 </h2>
 
+
+
 _______________________________________
 
 
 
 ### FEATURES
-Admin Panel for the book club founder, so he can have control over the data through the site itself, not only though database.
 
-Like an Unlike buttons for each book, so users can vote for their favourite book.
+#### Functionalities
 
-Forms for users to submit book suggestions.
+On this web app, the users can do the following actions, depending if they registered or not:
 
-When the users deletes their profile, their comments to be deleted as well.
-
-
+- read the content 
+- create account
+- log in on the site
+- comment on a book
+- delete their comment
+- update their comment
+- delete their profile
 
 #### EXISTING FEATURES
 
-#### Logo 
+**Logo** 
 
 I have created the logo for _click a book_ web app with [Canva](https://www.canva.com/). 
 
@@ -159,6 +164,9 @@ The navbar has 3 links:
 
 **Modal** for deletion confirmation. When the user wants to delete their profile or a comment, there is a modal with the option for cancelation or confirmation of deletion.
 
+**Buttons** used by the user to interact with the content on the page.
+
+
 
 
 #### FEATURES left to implement
@@ -166,48 +174,40 @@ The navbar has 3 links:
 - **Admin Panel** for the book club founder, so he can have control over the data through the site itself, not only though database.
 - **Like an Unlike buttons** for each book, so users can vote for their favourite book.
 - **Forms** for users to submit book suggestions.
+- **Search area** to look for books by title or author
+- **Filter option** to filter books by genre or alphabetical order
 - When the users deletes their profile, their comments to be deleted as well.
+
+
+
+
 
 ### Technologies Used
 
 I have created this website with the help of a multiple technologies:
 
 * [HTML](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5) to creating the main structure of my pages.
-
 * [CSS](https://www.w3.org/Style/CSS/Overview.en.html) for styling my components and layout on the page.
-
+* [Balsamiq](https://balsamiq.com/wireframes/?gclid=CjwKCAjwj975BRBUEiwA4whRB9TM6Ift0fUSy8zuYxc6kubGo-Z-_NgB56zcqoXHBgj6VbkIfGjz9RoCfaEQAvD_BwE) for designing the wireframes
 * [Python](https://www.python.org/) for the back-end development.
-
 * [PyMongo](https://api.mongodb.com/python/current/) as the Python API for MongoDB to bring the data from the database to the web app.
-
 * [Flask](https://flask.palletsprojects.com/en/1.0.x/) is a Python microframework.
-
-* [Jinja](https://jinja.palletsprojects.com/en/2.10.x/) for templating with Flask and HTML. It simplies the code to avoid repetition and links data from MongoDB.
-
+* [Jinja](https://jinja.palletsprojects.com/en/2.10.x/) for templating with Flask and HTML. It simplifies the code to avoid repetition and links data from MongoDB.
 * [MongoDB](https://cloud.mongodb.com/) as a database to keep all the records. 
-
 * [Visual Studio Code](https://code.visualstudio.com/) and [Gitpod](https://gitpod.com) was used as IDE.
-
 * [JavaScript](https://www.javascript.com/) for adding interactivity on the page.
-
 * [jQuery](https://jquery.com/) for JavaScript functionality and Materialize.
-
 * [git](https://git-scm.com/) for saving my code in Github.
-
-* [Bootstrap](https://getbootstrap.com/) as a framework to make the web app respnsive.
-
+* [Bootstrap](https://getbootstrap.com/) as a framework to make the web app responsive.
 * [Google Fonts](https://fonts.google.com/) for linking fonts.
-
-* [GitHub Desktop](https://desktop.github.com/) for pushing code from Visual Studio code from my machine to Github.
-
+* [GitHub Desktop](https://desktop.github.com/) for pushing code from Visual Studio code from my pc to Github.
 * [Heroku](https://www.heroku.com/) for hosting and deploying the web app.
-  
 
 ***
 
 ### TESTING
 
-
+Please read the testing document here.
 
 ***
 
@@ -250,6 +250,7 @@ Click on green button on the right with 'code' and  an arrow on it
 - Press `Enter` to save the cloned project
 
   
+
 *Option 2*
 
   Save the files as a zip and unzip it in a folder of your choice.
@@ -277,8 +278,7 @@ Click on green button on the right with 'code' and  an arrow on it
 
 ### Live Deployment on Heroku
 
-The project from GitHub is deployed and set live on Heroku. To deploy this project to Heroku I followed the 
- steps below and I have watched this [tutorial](https://www.youtube.com/watch?v=GgNcs9zlFSA).
+The project from GitHub is deployed and set live on Heroku. To deploy this project to Heroku I followed the  steps below and I have watched this [tutorial](https://www.youtube.com/watch?v=GgNcs9zlFSA).
 
 1. Sign up for Heroku and sign in to create a new app
 2. Click the "New" button to create a new app
@@ -294,7 +294,7 @@ $ heroku git:remote -a <click-a-book>
 $ git push heroku master
 ```
 
-8. In the Heroku settings tab, click on the "Real Config Vars" button to set environmental variables:
+1. In the Heroku settings tab, click on the "Real Config Vars" button to set environmental variables:
 
 - IP: `0.0.0.0`
 - PORT: `5000`
@@ -308,16 +308,21 @@ On the dashboard click on "Open App" button to view your deployed Heroku app.
 
 ## Credits
 
-#### Content
+Books title and synopsis were taken off Amazon.com.
 
+Navbar gradient was created with the help of gradient css generator on [cssgradient.io](https://cssgradient.io/)
 
+Registration and login functionalities  were implemented with the help of tutor [Tim Nelson](https://github.com/TravelTimN) from Code Institute and my colleague [Antonela Mrkalj](https://github.com/antonelam) helped me with the implementation of CRUD.
 
-#### Media
-
-
+Hero image was taken of Google images (no copyrights).
 
 ##### Acknowledgement
 
+Thank you to all my colleagues from Code Institute who took the time to answer my questions and review my project. Thank you to Tim Nelson! He made me believe I can do this project and finish on time.  Thank you to Antonela Mrkalj. She reinforced what Tim did - she made me believe in myself even more.
+
+Thank you to [Alan McGee](https://github.com/alimgee) who gave me the first pointers on how to start this project by giving me advice from his experience when he built a similar project [BookBites](https://github.com/alimgee/book-review-milestone-project3).
+
+Thank you to my mentor [Simen Daehlin](https://github.com/Eventyret) who helped me with shaping my idea for this project and being patient with the submission of this project.
 
 
 #### Disclaimer
