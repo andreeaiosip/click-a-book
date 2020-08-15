@@ -15,7 +15,7 @@ app.config['SECRET_KEY'] = os.urandom(32)
 
 mongo = PyMongo(app)
 
-
+# Display all books and comments on home page
 @app.route('/')
 def index():
     ''' function to display all books on the home page'''
@@ -23,7 +23,7 @@ def index():
     comments = list(mongo.db.comments.find())
     return render_template('index.html', books=books, comments=comments)
 
-# REGISTER------------------------------------
+# Register ------------------------------------
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -46,8 +46,7 @@ def register():
         return redirect(url_for("index", username=session["user"]))
     return render_template("register.html")
 
-# LOGIN-----------------------------------------------------
-
+# Login -----------------------------------------------------
 
 @app.route("/login", methods=['GET', 'POST'])
 def login():
@@ -76,7 +75,7 @@ def login():
     return render_template('login.html')
 
 
-# USER'S PROFILE -----------------------
+# Userțs Profile -----------------------
 @app.route("/profile/<username>", methods=['GET', 'POST'])
 def profile(username):
     # get the session username from db
@@ -89,7 +88,7 @@ def profile(username):
     return redirect(url_for("profile"))
 
 
-# LOGOUT -----------------------------------
+# Logout -----------------------------------
 
 @app.route("/logout")
 def logout():
@@ -110,7 +109,7 @@ def delete_profile(user_id):
     return redirect(url_for("index"))
 
 
-# ADD COMMENT -------------------------
+# Add comment -------------------------
 @app.route("/add_comment/<book_id>", methods=["GET", "POST"])
 def add_comment(book_id):
     book = mongo.db.bookInfo.find_one({"_id": ObjectId(book_id)})
@@ -134,10 +133,9 @@ def delete_comment(comment_id):
     mongo.db.comments.remove({"_id": ObjectId(comment_id)})
     flash("Comment deleted")
     return redirect(url_for("index"))
-    # return render_template("delete_comment.html", comments=comments)
 
 
-# UPDATE COMMENT -------------------------
+# Update comment  -------------------------
 @app.route("/update_comment/<comment_id>", methods=["GET", "POST"])
 def update_comment(comment_id):
     comments = mongo.db.comments.find_one({"_id": ObjectId(comment_id)})
