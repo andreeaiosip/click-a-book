@@ -178,6 +178,7 @@ The navbar has 3 links:
 - **Forms** for users to submit book suggestions.
 - **Search area** to look for books by title or author
 - **Filter option** to filter books by genre or alphabetical order
+- **Images** of books listed with links to view them on books websites.
 - When the users deletes their profile, their comments to be deleted as well.
 
 
@@ -224,8 +225,9 @@ I wanted to check how the page looks on different browsers for Windows and iOS, 
 I have performed various tests on what actions the user might take on the site and the results can be found in this table.
 
 
-----------------
-----------------
+<h2 align="center">
+    <a href="" target="_blank"><img src="/documentation/test-cases.PNG" alt="test-cases table"/></a>  
+</h2>
 
 ***
 
