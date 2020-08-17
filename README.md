@@ -86,28 +86,27 @@ Click on the below links to see the wireframes or you can view them in the  [wir
 
 
 #### Users stories:
+#### Users stories:
 
-* As a _general user_ I would like to get a clean and calm feel of the website when I open it.
+* As a _user_ I would like to get a clean and calm feel of the website when I open it.
 
-* As a _general user_, I want to be able to create an account with password protected.
+* As a _user_, I want to be able to create an account with password protected.
 
-* As a _general user_, I want to be able to read synopsis of the books the book club founder posted on the website.
+* As a _user_, I want to be able to read synopsis of the books the book club founder posted on the website.
 
-* *As a registered user*, I want to navigate my way easy on the website, to browse around through the content.
+* *As a _user_, I want to navigate my way easy on the website, to browse around through the content.
 
-* As a _registered user_ I would like to be able to log in and log out from my account to keep it secure and private.
+* As a _user_ I would like to be able to log in and log out from my account to keep it secure and private.
 
-* As a _registered user_ I would like to be able to delete my account at any point.
+* As a _user_ I would like to be able to delete my account at any point.
 
-* As a _registered user_ I would like to be able to comment on books.
+* As a _user_ I would like to be able to comment on books.
 
-* As a _registered user_ I would like to be able delete comments I've posted.
+* As a _user_ I would like to be able delete comments I've posted.
 
-* As a _registered user_ I would like to be able update any comments I've posted.
+* As a _user_ I would like to be able update any comments I've posted.
 
-* As a _registered user_ I would like to be able delete any comments I've posted.
-
-  
+* As a _user_ I would like to be able delete any comments I've posted.
 
 ***
 
