@@ -1,9 +1,9 @@
 <h1 align="center">click a book</h1>
 <div align-itmes="center">
 <h2 align="center">
-    <a  href=""  target="_blank"><img  src="/documentation/gifs-view/desktop.png"  alt="click-a-book desktop screen"/></a>
+       <a  href=""  target="_blank"><img  src="/wireframes/desktop-home-page-screenshot.png"  alt="click-a-book desktop screen"/></a>
 <br>
-    <a  href=""  target="_blank"><img  src="/documentation/gifs-view/mobile.gif" alt="click-a-book mobile Screen"/></a>
+     <a  href=""  target="_blank"><img  src="/wireframes/mobile-home-page.gif" alt="click-a-book mobile Screen"/></a>
 </h2>
 </div>
 <h2 align="center">click a book</h2>
@@ -82,12 +82,7 @@ These colours bring a sense of calmness and cleanness for the reader to put them
 
 At the beginning of the  project, the idea was a bit more complex, but I downsized it, so I can meet the submission deadline. 
 
-Click on the below links to see the wireframes or you can view them in the  [wireframes](/documentation/wireframes) folder. These were create with [Balsamiq](https://balsamiq.com/wireframes/?gclid=CjwKCAjwj975BRBUEiwA4whRB9TM6Ift0fUSy8zuYxc6kubGo-Z-_NgB56zcqoXHBgj6VbkIfGjz9RoCfaEQAvD_BwE).
-
-#### Wireframes
-
-* **[Desktop view](/documentation/wireframes/desktop)**
-* **[Mobile view](/documentation/wireframes/mobile)**
+Click on the below links to see the wireframes or you can view them in the  [wireframes](/wireframes) folder. These were create with [Balsamiq](https://balsamiq.com/wireframes/?gclid=CjwKCAjwj975BRBUEiwA4whRB9TM6Ift0fUSy8zuYxc6kubGo-Z-_NgB56zcqoXHBgj6VbkIfGjz9RoCfaEQAvD_BwE).
 
 
 #### Users stories:
@@ -119,8 +114,9 @@ Click on the below links to see the wireframes or you can view them in the  [wir
 ### Database Design
 
 <h2 align="center">
-    <a href="" target="_blank"><img src="/documentation/DBSchema.PNG" alt="click-a-book db-schema"/></a>  
+    <a href="" target="_blank"><img src="/wireframes/DBSchema.PNG" alt="click-a-book db-schema"/></a>  
 </h2>
+
 
 
 
@@ -226,8 +222,9 @@ I have performed various tests on what actions the user might take on the site a
 
 
 <h2 align="center">
-    <a href="" target="_blank"><img src="/documentation/test-cases.PNG" alt="test-cases table"/></a>  
+    <a href="" target="_blank"><img src="/wireframes/test-cases.PNG" alt="test-cases table"/></a>  
 </h2>
+
 
 ***
 
