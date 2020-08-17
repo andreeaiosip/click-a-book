@@ -1,7 +1,6 @@
 from flask_pymongo import PyMongo
 from flask import Flask, flash, render_template, redirect, request, url_for, \
     session, flash, Markup
-# from forms import RegistrationForm, LoginForm
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
 import os
@@ -101,7 +100,7 @@ def logout():
 
 # DELETE PROFILE ------------------------------
 
-@app.route("/delete_profile/<user_id>", methods=["GET", "POST"])
+@app.route("/delete-profile/<user_id>", methods=["GET", "POST"])
 def delete_profile(user_id):
     mongo.db.users.remove({"username": session["user"]})
     session.clear()
@@ -110,7 +109,7 @@ def delete_profile(user_id):
 
 
 # Add comment -------------------------
-@app.route("/add_comment/<book_id>", methods=["GET", "POST"])
+@app.route("/add-comment/<book_id>", methods=["GET", "POST"])
 def add_comment(book_id):
     book = mongo.db.bookInfo.find_one({"_id": ObjectId(book_id)})
     if request.method == "POST":
@@ -124,11 +123,11 @@ def add_comment(book_id):
         flash("Comment added")
         return redirect(url_for("index"))
 
-    return render_template("add_comment.html", book=book)
+    return render_template("add-comment.html", book=book)
 
 
 # Delete comment -----------------
-@app.route("/delete_comment/<comment_id>", methods=["GET", "POST"])
+@app.route("/delete-comment/<comment_id>", methods=["GET", "POST"])
 def delete_comment(comment_id):
     mongo.db.comments.remove({"_id": ObjectId(comment_id)})
     flash("Comment deleted")
@@ -136,7 +135,7 @@ def delete_comment(comment_id):
 
 
 # Update comment  -------------------------
-@app.route("/update_comment/<comment_id>", methods=["GET", "POST"])
+@app.route("/update-comment/<comment_id>", methods=["GET", "POST"])
 def update_comment(comment_id):
     comments = mongo.db.comments.find_one({"_id": ObjectId(comment_id)})
     if request.method == "POST":
@@ -147,7 +146,7 @@ def update_comment(comment_id):
         })
         flash("Comment updated")
         return redirect(url_for("index"))
-    return render_template("update_comment.html", comments=comments)
+    return render_template("update-comment.html", comments=comments)
 
 
 if __name__ == '__main__':
