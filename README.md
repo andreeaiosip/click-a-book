@@ -9,39 +9,10 @@
 <h2 align="center">click a book</h2>
 
 
-**click a book**  is a website of for a fictional book club set up by the founders of the book club. 
-
-***
-
-This project is created for the Practical Python and Data-Centric Development module at the **Full Stack Software Development Course** with **Code Institute**.
-
-**The brief** 
-
-_Project purpose_: In this project, you'll build a full-stack site that allows your users to manage a common dataset about a particular domain.
-
-_Main Technologies Required_: HTML, CSS, JavaScript, Python, Flask, MongoDB.
-
-_Optional_: Additional libraries and external APIs.
-
-_Value provided_:
-
-1. Users make use of the site to share their own data with the community, and benefit from having convenient access to the data provided by all other members.
-
-2. The site owner advances their own goals by providing this functionality, potentially by being a regular user themselves. The site owner might also benefit from the collection of the dataset as a whole.
-
-   
-
-   
-
-***
-
-This web app will use **CRUD** operations so the users can create, read, update and delete data from the database (MongoDB) and is hosted on Heroku.com.
-
 **THE IDEA**
 
 _click a book_ is a web app of a book club set up by the founders of the book club. They post suggestions of books for the next meetup and members can log in and pick the book they are interested in reading for the next meetup.
 
- I have chose this theme for the website because I like reading books and I think I can understand better how a user will navigate the site and what are their expectations when they open the website. 
 
 ### The need:
 
