@@ -24,7 +24,7 @@
             <div class="row">
               <div class="input-field col s12">
                 <label for="password">Password</label>
-                <input id="password" name="password" type="password" pattern="^\S+{6,32}" class=" form-control validate" required>
+                <input id="password" name="password" type="password" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$" class=" form-control validate" required>
                 </div>
               </div>
               <!-- Register button -->
@@ -47,7 +47,7 @@
           <p >The username must be only lowercase letters; at least 6 characters.
          
             <br>
-         The password must contain at least 6 characters.
+         The password must contain inimum 8 characters, at least one letter and one number.
       
             </p>
           </div>
