@@ -86,7 +86,6 @@ Click on the below links to see the wireframes or you can view them in the  [wir
 
 
 #### Users stories:
-#### Users stories:
 
 * As a _user_ I would like to get a clean and calm feel of the website when I open it.
 
@@ -228,7 +227,7 @@ I have performed various tests on what actions the user might take on the site a
 
 
 <h2 align="center">
-    <a href="" target="_blank"><img src="/wireframes/test-cases.PNG" alt="test-cases table"/></a>  
+    <a href="" target="_blank"><img src="/wireframes/test-cases-screenshot.PNG" alt="test-cases table"/></a>  
 </h2>
 
 
